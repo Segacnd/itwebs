@@ -1,0 +1,132 @@
+.hrpanel {
+    h1 {
+        font-size: 2vw;
+    }
+}
+
+.hrList{
+    position: static;
+    display: flex;
+    row-gap: 3svh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hrMenuComponent {
+    width: 80vw;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    column-gap: 10vw;
+}
+
+.hrMenuItem {
+    display: flex;
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    text-decoration: none;
+
+    h2 {
+        text-align: center;
+        color: white;
+        text-decoration: none;
+    }
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding: 0.5vw;
+    transition: 1s;
+}
+
+.hrMenuItem:hover {
+    box-shadow: 0 0 15px 0 white;
+    border: 2px solid white;
+}
+
+.hrListItem {
+    display: grid;
+    grid-template-columns: repeat(5, 15vw);
+    align-content: center;
+    padding-left: 5vw;
+    column-gap: 5vw;
+    align-self: center;
+}
+
+.hrItemName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    cursor: default;
+    height: 10svh;
+
+    button {
+        border-radius: 21px;
+        padding: 0.5vw 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 8vw;
+        height: 4vw;
+    }
+}
+
+.hrListButton {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.blockHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    align-self: center;
+}
+.modalComponent{
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100svh;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer{
+    background-color: white;
+    color: black;
+    padding: 1vw;
+    border-radius: 21px;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1svh;
+}
+.modalLine{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vw;
+    align-items: center;
+}
+.modalKey{
+    width: 15vw;
+}
+.modalValue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: gray;
+    color: black;
+    padding: 0.5vw 1vw;
+}

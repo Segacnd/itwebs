@@ -1,0 +1,39 @@
+.component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageContainer{
+    margin-top: 0;
+}
+.imageItem{
+    margin-top: -5svh;
+    scale: 0.7;
+}
+
+.header{
+    margin-top: 5svh;
+    text-align: center;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        margin: 0;
+    }
+    p{
+        margin-top: 1svh;
+    }
+}
+
+@media (max-width:800px) {
+    .imageContainer{
+        justify-content: flex-start;
+    }
+    .imageItem{
+        width: 100vw;
+        scale: 1;
+        margin-top: 0;
+    }
+}

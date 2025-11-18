@@ -1,0 +1,119 @@
+.detailHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5svh;
+    padding-left: 7vw;
+    column-gap: 2vw;
+    margin-bottom: 2svh;
+}
+
+.headBanner {
+    display: flex;
+    flex-direction: column;
+    height: 70svh;
+}
+
+.headBannerSVG {
+    width: 60vw;
+    position: absolute;
+    height: 70svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.svgText {
+    position: absolute;
+    z-index: 11;
+    transform: translateX(-5vw) translateY(-15svh);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 0.1vw;
+    max-width: 30vw;
+}
+
+.headBannerImage {
+    background-image: url('../../../../assets/detailService.jpg');
+    width: 70%;
+    height: 100%;
+    background-position: center;
+    align-self: flex-end;
+    z-index: 8;
+    background-size: cover;
+}
+
+.mobileHeadBannerSVG {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .detailHeading {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 5svh;
+        padding-left: 7vw;
+        column-gap: 2vw;
+        margin-bottom: 2svh;
+        h1{
+            font-size: 5vw;
+        }
+    }
+
+    .headBanner {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .headBannerSVG {
+        width: 60vw;
+        position: absolute;
+        height: 50svh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        overflow: hidden;
+        background: transparent;
+    }
+
+    .headBannerImage {
+        background-image: url('../../../../assets/detailService.jpg');
+        width: 100vw;
+        height: 40svh;
+        position: relative;
+        background-position: center;
+        top: -15svh;
+        align-self: flex-end;
+        z-index: 8;
+        background-size: cover;
+    }
+
+    .mobileHeadBannerSVG {
+        display: flex;
+        z-index: 12;
+        svg {
+            width: 100%;
+        }
+
+        .svgText {
+            position: absolute;
+            z-index: 20;
+            transform: none;
+            font-family: 'Gilroy Light', sans-serif;
+            letter-spacing: normal;
+            max-width: 70vw;
+            padding: 7vw;
+            font-size: 4.5vw;
+            font-weight: 500;
+            word-spacing: 0.3vw;
+        }
+    }
+
+}

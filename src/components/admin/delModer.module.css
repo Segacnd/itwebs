@@ -1,0 +1,48 @@
+.modalContainer{
+    width: 35vw;
+    border-radius: 21px;
+    padding: 2vw;
+    height: 60svh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito Sans', sans-serif;
+
+    h2{
+        color:black;
+        cursor: default;
+        font-size: 1vw;
+        font-weight: 400;
+    }
+
+    h3{
+        color: black;
+        margin-top: 10svh;
+        margin-bottom: 10svh;
+        align-self: center;
+    }
+
+    input{
+        align-self: center;
+        height: 5svh;
+        width: 20vw;
+        transition: 0.7s;
+        outline: none;
+        padding: 1svh 1vw;
+        border-radius: 21px;
+    }
+
+    button{
+        width:15vw;
+        padding: 1.5svh;
+        font-family: 'Nunito Sans',sans-serif;
+        font-size: 1.1vw;
+        letter-spacing: 0.1vw;
+        font-weight: 300;
+        align-self: center;
+        border-radius: 21px;
+        cursor: pointer;
+        transition: 0.7s;
+        margin-top: 5svh;
+    }
+}

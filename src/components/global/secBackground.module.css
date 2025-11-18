@@ -1,0 +1,157 @@
+@keyframes blinds {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    25%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 0;
+        transform: scale(0);
+
+    }
+    75%{
+        opacity: 1;
+        transform: scale(1);
+
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0);
+
+    }
+}
+
+@keyframes ride {
+    0%{
+        transform: translateX(-20vw);
+    }
+    10%{
+        transform: translateX(10vw);
+    }
+    15%{
+        transform: translateX(0vw);
+    }
+    40%{
+        transform: translateX(90vw);
+    }
+    45%{
+        transform: translateX(80vw);
+    }
+    50%{
+        transform: translateX(100vw);
+    }
+    60%{
+        transform: translateX(70vw);
+    }
+    65%{
+        transform: translateX(80vw);
+    }
+    90%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-20vw);
+    }
+}
+
+.component{
+    position: fixed;
+    width: 100vw;
+    background-color: #1a1a1a;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: clip;
+}
+
+.flexstartSphere{
+    margin-top: 35svh;
+    margin-left: 10vw;
+    width: 1vw;
+    height: 1vw;
+    background-color: rgba(0, 124, 248,0.98);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    animation: blinds infinite ease-in-out 14s;
+    border-radius: 50%;
+    box-shadow:
+    0 0 20px 7px #007CF8,
+    0 0 30px 8px #007CF8,
+    0 0 40px 9px #007CF8,
+    0 0 50px 10px #007CF8,
+    0 0 60px 11px #007CF8,
+    0 0 100px 45px #007CF8,
+    0 0 150px 50px #007CF8,
+    0 0 250px 80px #007CF8,
+    0 0 300px 120px #007CF8;
+}
+
+.flexendSphere{
+    margin-top: 50svh;
+    margin-right: 15vw;
+    width: 1vw;
+    height: 1vw;
+    background-color: rgba(21, 0, 248, 0.98);
+    backdrop-filter: blur(100px);
+    animation: blinds infinite ease-in-out 8s;
+    -webkit-backdrop-filter: blur(100px);
+    border-radius: 50%;
+    box-shadow:
+    0 0 20px 7px blue,
+    0 0 30px 8px blue,
+    0 0 40px 9px blue,
+    0 0 50px 10px blue,
+    0 0 60px 11px blue,
+    0 0 150px 75px blue,
+    0 0 200px 70px blue,
+    0 0 305px 80px blue,
+    0 0 400px 100px blue;
+}
+
+.blindLine{
+    align-self: center;
+    margin-top: 20svh;
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    overflow: visible;
+    border-radius: 21px;
+    align-items: center;
+}
+
+.blindElem{
+    transform: translateX(10vw);
+    width:1vw;
+    height: 1vw;
+    background-color: rgba(248, 208, 29, 0.92);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    background-clip: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: ride infinite ease-in-out 15s;
+    animation-direction: alternate;
+    border-radius: 50%;
+    box-shadow:
+    0 0 20px 7px rgb(248, 208, 29),
+    0 0 30px 8px rgb(248, 208, 29),
+    0 0 40px 9px rgb(248, 208, 29),
+    0 0 50px 10px rgb(248, 208, 29),
+    0 0 60px 11px rgb(248, 208, 29),
+    0 0 70px 12px rgb(248, 208, 29),
+    0 0 80px 13px rgb(248, 208, 29),
+    0 0 95px 14px rgb(248, 208, 29),
+    0 0 100px 15px rgb(248, 208, 29);
+}

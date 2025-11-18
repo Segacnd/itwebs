@@ -1,0 +1,295 @@
+.modalComponent {
+    width: 100vw;
+    height: 100svh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 90;
+}
+
+.createModalInputs {
+    display: flex;
+    flex-direction: column;
+    height: 75svh;
+    padding-top: 5svh;
+    padding-bottom: 2svh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    row-gap: 2svh;
+}
+
+.createModalInputPair {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5svh;
+
+    label {
+        position: relative;
+        left: 1vw;
+    }
+
+    input {
+        width: 30vw;
+        padding: 0.5vw 1vw;
+        border-radius: 21px;
+        font-weight: 300;
+    }
+
+    textarea {
+        resize: none;
+        min-width: 30vw;
+        width: 30vw;
+        padding: 0.5vw 1vw;
+        border-radius: 21px;
+        font-weight: 300;
+    }
+}
+
+.createModalContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    border-radius: 21px;
+    box-shadow: 0 0 2vw 1px gray;
+    color: black;
+    background-color: white;
+    transition: 1s;
+    min-width: 35vw;
+    height: 85svh;
+    opacity: 0;
+    scale: 0;
+
+    * {
+        user-select: none;
+    }
+}
+
+.createModalListItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.createModalLists {
+    display: flex;
+    margin-top: 1svh;
+    flex-direction: column;
+    row-gap: 1svh;
+    outline: none;
+
+    input {
+        width: 28vw;
+        border: 1px solid gray;
+        outline: none;
+        font-weight: 300;
+        padding: 0.5vw 1vw;
+        border-radius: 21px;
+    }
+}
+
+.createModalListItemIcon {
+    width: 1.7vw;
+    margin-left: 1vw;
+    height: 1.7vw;
+    cursor: pointer;
+}
+
+.modalCreateButtons {
+    height: 8svh;
+    padding-top: 1.5svh;
+    box-shadow: 0px -5px 5px -5px rgba(93, 98, 101, 0.6);
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    *{
+        cursor: pointer;
+    }
+}
+
+.createModalAddList {
+    margin-top: 1svh;
+    border: none;
+    box-shadow: 0 0 3px 0 black;
+    margin-left: 0.5vw;
+    padding: 0.8vw 1vw;
+    font-size: 0.7vw;
+    background-color: #1a1a1a;
+
+    color: white;
+    border: 1px solid #007CF8;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 21px;
+}
+
+.createModalFileIcon {
+    width: 2vw;
+    height: 2vw;
+}
+
+.createModalFileContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    justify-content: center;
+    width: 30vw;
+    border-radius: 21px;
+    margin-top: 1svh;
+    height: 10svh;
+    border: 1px solid gray;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: all 99;
+
+        span {
+            margin-left: 1vw;
+
+        }
+    }
+
+    input {
+        opacity: 0;
+        background: none;
+        width: 100%;
+        height: 100%;
+        appearance: none;
+    }
+
+}
+
+.vacanciesList {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    row-gap: 1svh;
+}
+
+.vacancieListItem {
+    display: grid;
+    max-width: 90vw;
+    align-self: center;
+    grid-template-columns: repeat(8, 10.8vw) 3vw ;
+    grid-template-rows: repeat(auto, max-content);
+}
+
+.vacancieItemName {
+    cursor: pointer;
+    width: auto;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 10vw;
+    span {
+        width: 100%;
+        overflow-wrap: break-word;
+
+    }
+}
+
+.shortChangeComponent{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+    width: 100vw;
+    height: 100svh;
+}
+.shortChangeContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5vw 1vw;
+    background-color: #fff;
+    border-radius: 16px;
+    color: black;
+    button{
+        width: 15vw;
+        margin-top: 2svh;
+        padding: 0.5vw 1vw;
+        align-self: center;
+        border-radius: 21px;
+
+    }
+}
+.vacanciesHeading{
+    margin: 5svh 0;
+    display: flex;
+    font-weight: 800;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+}
+.createLine{
+    button{
+        padding: 1vw 2vw;
+        font-family: 'Nunito', sans-serif;
+        background-color: #1a1a1a;
+        color: white;
+        font-size: 1vw;
+        border-radius: 21px;
+        outline: none;
+        transition: 1s;
+        cursor: pointer;
+    }
+    button:hover{
+        box-shadow: 0 0 12px 0 #007CF8;
+    }
+}
+.vacancieItemIcon{
+    color: white;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+.vacancieItemIcon:hover{
+    cursor: pointer;
+}
+.vacanciesUnderline{
+    height: 1px;
+    width: 85vw;
+    margin-bottom: 3svh;
+    background-color: #007CF8;
+}
+.editButton{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+}
+.editButton:hover{
+    box-shadow: 0 0 12px 0 #007CF8;
+}
+.changeListItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+    column-gap: 0.5vw;
+    input{
+        width: 100%;
+    }
+    .vacancieItemIcon{
+        z-index: 90;
+        color: #1a1a1a;
+    }
+}

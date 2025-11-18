@@ -1,0 +1,42 @@
+.mainLink {
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    column-gap: 2vw;
+    cursor: pointer;
+    margin: 10svh 0;
+}
+
+.text {
+    font-size: 1.7vw;
+    color: white;
+}
+
+.svg {
+    width: 200;
+    height: 24;
+}
+
+@media (max-width:800px) {
+    .mainLink {
+        text-decoration: none;
+        display: flex;
+        align-self: center;
+        align-items: center;
+        column-gap: 3vw;
+        cursor: pointer;
+        margin: 5svh 0;
+        margin-top: 0;
+    }
+
+    .text {
+        font-size: 3.5vw;
+        color: white;
+    }
+
+    .svg {
+        width: 50;
+        height: 24;
+    }
+}

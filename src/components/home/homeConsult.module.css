@@ -1,0 +1,210 @@
+.block {
+    display: grid;
+    align-self: center;
+    overflow: hidden;
+    width: 88vw;
+    grid-template-columns: repeat(2, 1fr);
+    height: 85svh;
+    padding-top: 15svh;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.question {
+    font-size: 3vw;
+    font-weight: 900;
+    color: white;
+}
+
+.answer {
+    margin-top: 5svh;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+
+.inputs {
+    display: flex;
+    margin-top: 1svh;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 8;
+    row-gap: 2vw;
+}
+
+.inputPair {
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    row-gap: 0.5vw;
+}
+
+.inputPair label {
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    padding-left: 0.5vw;
+    font-size: 1.2vw;
+}
+
+.inputPair input,
+.inputPair textarea {
+    background: rgba(45, 44, 44, 0.3);
+    color: white;
+    border-radius: 16px;
+    height: 3vw;
+    box-shadow: 0 4px 30px rgba(103, 101, 101, 0.1);
+    backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px);
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    font-size: 1.2vw;
+    font-family: 'Nunito Sans', sans-serif;
+    overflow: hidden;
+    padding: 0 1vw;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.inputPair textarea {
+    height: 6vw;
+    resize: none;
+    padding: 1vw;
+    overflow: hidden;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.senderButton {
+    background: rgba(103, 101, 101, 0.25);
+    color: white;
+    border-radius: 16px;
+    height: 3vw;
+    box-shadow: 0 4px 30px rgba(103, 101, 101, 0.1);
+    backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px);
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.senderButton:hover {
+    background-color: #007CF8;
+    border: 1px solid #007CF8;
+}
+
+.senderButton:active {
+    background-color: blue;
+    border: 1px solid blue;
+}
+
+@media (max-width: 900px) {
+    .block {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        overflow: hidden;
+        width: 80vw;
+        height: max-content;
+        padding-bottom: 5svh;
+        padding-top: 0;
+        margin-top: 5svh;
+        margin-bottom: 0;
+        font-family: 'Nunito Sans', sans-serif;
+        justify-content: flex-start;
+    }
+    .content {
+        margin: 0;
+        row-gap: 0;
+    }
+    .question {
+        font-size: 5vw;
+        font-weight: 800;
+        width: 90%;
+        text-transform: uppercase;
+        color: white;
+        margin: 0;
+    }
+    .answer {
+        padding: 0;
+        margin: 0;
+        width: 95%;
+        margin-top: 5vw;
+        font-weight: 200;
+        font-size: 4.5vw;
+    }
+    .inputs {
+        display: flex;
+        margin-top: 5vw;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index: 8;
+        row-gap: 2svh;
+    }
+    .inputPair {
+        display: flex;
+        flex-direction: column;
+        width: 99%;
+        row-gap: 1svh;
+    }
+    .inputPair label {
+        color: white;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
+        padding-left: 0.5vw;
+        font-size: 4vw;
+    }
+    .inputPair input,
+    .inputPair textarea {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border-radius: 16px;
+        height: 5svh;
+        box-shadow: 0 4px 30px rgba(103, 101, 101, 0.1);
+        backdrop-filter: blur(3.9px);
+        -webkit-backdrop-filter: blur(3.9px);
+        border: none;
+        font-size: 4vw;
+        font-family: 'Nunito Sans', sans-serif;
+        overflow: hidden;
+        padding: 0 5vw;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    .inputPair input:focus,
+    .inputPair textarea:focus {
+        outline: none;
+    }
+    .inputPair textarea {
+        height: 10svh;
+        resize: none;
+        padding: 4vw;
+        overflow: hidden;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    .senderButton {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 4vw;
+        letter-spacing: 0.2vw;
+        border-radius: 16px;
+        height: 5svh;
+        box-shadow: 0 4px 30px rgba(103, 101, 101, 0.1);
+        backdrop-filter: blur(3.9px);
+        -webkit-backdrop-filter: blur(3.9px);
+        border: none;
+        outline: none;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .senderButton:hover {
+        background-color: #007CF8;
+        color: white;
+    }
+    .senderButton:active {
+        background-color: #007CF8;
+        color: white;
+    }
+}

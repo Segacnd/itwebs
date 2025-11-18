@@ -1,0 +1,815 @@
+@keyframes quizGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.block {
+    width: 88vw;
+    padding-left: 7vw;
+    height: max-content;
+    margin: 5svh 0;
+    display: flex;
+    flex-direction: column;
+
+    * {
+        transition: 1s;
+    }
+}
+
+.container {
+    width: 88vw;
+    background: linear-gradient(-65deg, #007CF8, #1a1a1a, #111635, #007CF8);
+    background-size: 400% 400%;
+    animation: quizGradient 15s ease-in-out infinite;
+    padding-top: 2svh;
+    padding-bottom: 5svh;
+    min-height: 23vw;
+    border-radius: 12px;
+    height: auto;
+    height: max-content;
+}
+
+.containerHeading {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.closeIcon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 5svh;
+    cursor: pointer;
+}
+
+.progressBar {
+    width: 90%;
+    margin-left: 3vw;
+    background-color: #1a1a1a;
+    border-radius: 21px;
+    height: 1.3svh;
+}
+
+.progressLine {
+    background-color: aliceblue;
+    height: 100%;
+    border-radius: 21px;
+    transition: 1s;
+    margin-left: 0.1vw;
+}
+
+.questionNum {
+    margin-left: 3vw;
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    font-weight: 100;
+}
+
+.content {
+    margin-top: 2svh;
+    margin-left: 3vw;
+    width: 90%;
+}
+
+.title {
+    margin-top: 8svh;
+    margin-bottom: 2svh;
+    font-size: 1.9vw;
+    font-weight: 700;
+}
+
+.variantsList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5svh;
+    row-gap: 0.7svh;
+    margin-bottom: 5svh;
+}
+
+.quizRadioItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
+    font-size: 1.2vw;
+
+    input {
+        appearance: none;
+        align-self: center;
+        margin-bottom: 0.2vw;
+        width: 0.8vw;
+        height: 0.8vw;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        border-radius: 50%;
+        border: 3px solid white;
+        transition: 1s;
+        background-color: #fff;
+        padding: 0.1vw;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    input:checked {
+        background-color: #1a1a1a;
+    }
+}
+
+.bannerContainer {
+    background: linear-gradient(-65deg, #007CF8, #1a1a1a, #111635, #007CF8);
+    background-size: 400% 400%;
+    animation: quizGradient 15s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    min-height: 20vw;
+    height: auto;
+    border-radius: 12px;
+    padding: 3vw;
+}
+
+.bannerTitle {
+    color: white;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.01vw;
+    line-height: 2.4vw;
+    font-size: 2.5vw;
+    max-width: 65%;
+    margin: 0;
+}
+
+.bannerDesc {
+    margin: 0;
+    margin-top: 4svh;
+    font-weight: 100;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    max-width: 44%;
+}
+
+.bannerButton {
+    margin-top: 4svh;
+    width: 18vw;
+    padding: 1vw 0;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 21px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1vw;
+    font-family: 'Nunito Sans', sans-serif;
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: 100;
+}
+
+.bannerButtonIcon {
+    width: 1.7vw;
+    height: 1.7vw;
+}
+
+.backImage {
+    position: absolute;
+    width: 30vw;
+    align-self: flex-end;
+    height: 30vw;
+    scale: 0.7;
+    background-image: url('../../assets/quizBannerImage.png');
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    background-clip: content-box;
+}
+
+.quizCheckbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
+    font-size: 1.2vw;
+    position: relative;
+
+    input {
+        appearance: none;
+        width: 1vw;
+        cursor: pointer;
+        height: 1vw;
+        background-color: #fff;
+        border-radius: 20%;
+        z-index: 10;
+    }
+
+
+    label {
+        cursor: pointer;
+    }
+}
+
+.checkboxIcon {
+    position: absolute;
+    z-index: 13;
+    cursor: pointer;
+    user-select: none;
+    transition: 1s;
+    transform: translateX(0.1vw);
+    width: 1.3vw;
+    height: 1.3vw;
+    color: black;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2vw;
+
+    button {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1vw;
+        display: flex;
+        padding: 2svh 3vw;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 21px;
+        border: none;
+        height: 7svh;
+        cursor: pointer;
+        box-shadow: 3px 4px 2px 1px rgba(0, 0, 0, 0.3);
+        font-weight: 100;
+    }
+}
+
+.finalTitle {
+    font-weight: 700;
+    font-size: 1.6vw;
+    align-self: center;
+}
+
+.finalContent {
+    display: flex;
+    flex-direction: column;
+
+    * {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+.finalPrice {
+    align-self: center;
+    font-size: 1.8vw;
+    font-weight: 600;
+    margin-top: 1svh;
+}
+
+.finalDesc {
+    margin-top: 3vw;
+    font-weight: 300;
+    font-size: 1.25vw;
+    transform: translateX(1vw);
+    margin-bottom: 1svh;
+    line-height: 1.2vw;
+    max-width: 40vw;
+    color: white;
+}
+
+.finalInputs {
+    display: flex;
+    margin-bottom: 2vw;
+    flex-direction: column;
+    row-gap: 0.5vw;
+}
+
+.finalInputPair {
+    display: flex;
+    flex-direction: column;
+    max-width: 45vw;
+    row-gap: 0.3vw;
+
+    label {
+        font-size: 1.2vw;
+        font-weight: 300;
+        transform: translateX(1vw);
+    }
+
+    input {
+        padding: 0.5vw 1vw;
+        border-radius: 21px;
+        outline: none;
+        border: none;
+        font-size: 1vw;
+        box-shadow: 2px 4px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    textarea {
+        padding: 0.5vw 1vw;
+        border-radius: 21px;
+        outline: none;
+        border: none;
+        font-size: 1vw;
+        min-height: 3vw;
+        resize: none;
+        box-shadow: 2px 4px 2px 1px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+    }
+}
+
+.doneContainer {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    padding-left: 8vw;
+    font-family: 'Nunito Sans', sans-serif;
+
+    h5 {
+        margin-top: 10svh;
+        font-size: 1.9vw;
+        font-weight: 700;
+        margin-bottom: 3vw;
+    }
+
+    h6{
+        font-size: 1.8vw;
+        font-weight: 500;
+        margin-top: 2vw;
+
+    }
+
+    p {
+        font-size: 1.9vw;
+        font-weight: 200;
+        margin: 0;
+    }
+}
+
+@media (max-width:800px) {
+    .block {
+        width: 88vw;
+        padding-left: 7vw;
+        height: auto;
+        margin-top: 2svh;
+        margin-bottom: 4svh;
+        display: flex;
+        flex-direction: column;
+
+        * {
+            transition: 1s;
+        }
+    }
+
+    .container {
+        width: 88vw;
+        background-color: #007CF8;
+        padding-top: 1svh;
+        padding-bottom: 1svh;
+        min-height: 60svh;
+        transition: 1s;
+        height: auto;
+        max-height: none;
+    }
+
+    .containerHeading {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .closeIcon {
+        display: none;
+        width: 1.5vw;
+        height: 1.5vw;
+        margin-right: 5svh;
+        cursor: pointer;
+    }
+
+    .progressBar {
+        width: 92%;
+        margin-left: 3vw;
+        background-color: #1a1a1a;
+        border-radius: 21px;
+        height: 1vw;
+    }
+
+    .progressLine {
+        background-color: aliceblue;
+        height: 100%;
+        border-radius: 21px;
+        transition: 1s;
+        margin-left: 0.1vw;
+    }
+
+    .questionNum {
+        margin-left: 3vw;
+        text-transform: uppercase;
+        font-size: 5vw;
+        margin-top: 2svh;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 400;
+    }
+
+    .content {
+        margin-top: 0;
+        margin-left: 3vw;
+        width: 90%;
+    }
+
+    .title {
+        margin-top: 1svh;
+        margin-bottom: 2svh;
+        font-size: 5vw;
+        font-family: 'Gilroy Bold', sans-serif;
+        max-width: 100%;
+        align-self: center;
+        color: white;
+        letter-spacing: 0.2vw;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .variantsList {
+        display: flex;
+        min-height: 30svh;
+        flex-direction: column;
+        margin-top: 0;
+        row-gap: 2svh;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1svh;
+    }
+
+    .quizRadioItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1vw;
+        font-size: 3.5vw;
+        font-weight: 100;
+        color: white;
+        transition: all 1s;
+
+        input {
+            display: none;
+            appearance: none;
+            align-self: center;
+            margin-bottom: 0vw;
+            width: 1;
+            margin-top: 0;
+            height: 1;
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid white;
+            transition: 1s;
+            background-color: #fff;
+            padding: 0vw;
+        }
+
+        label {
+            cursor: pointer;
+            max-width: 100%;
+            background-color: aliceblue;
+            border-radius: 32px;
+            color: black;
+            font-size: 4vw;
+            text-align: center;
+            font-family: 'Gilroy Bold', sans-serif;
+            font-weight: 500;
+            padding: 1vw 5vw;
+            width: 90%;
+            height: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        input:checked {
+            background-color: #1a1a1a;
+        }
+
+        input:checked+label {
+            box-shadow: 0 0 100px 0 blue inset;
+            color: white;
+        }
+    }
+
+    .bannerContainer {
+        background-color: #007CF8;
+        display: flex;
+        flex-direction: column;
+        min-height: 60svh;
+        height: auto;
+        justify-content: center;
+        padding: 3vw;
+    }
+
+    .bannerTitle {
+        color: white;
+        font-weight: 500;
+        font-family: 'Gilroy', sans-serif;
+        letter-spacing: 0.03vw;
+        line-height: 6vw;
+        font-size: 6vw;
+        max-width: 90%;
+        align-self: center;
+        text-align: center;
+        margin: 0;
+        margin-top: 3svh;
+
+    }
+
+    .bannerDesc {
+        margin: 0;
+        margin-top: 2svh;
+        font-weight: 100;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 5vw;
+        line-height: 5vw;
+        max-width: 85%;
+        width: 80%;
+        text-wrap-mode: wrap;
+
+        align-self: center;
+        text-align: center;
+    }
+
+    .bannerButton {
+        align-self: center;
+        margin-top: 8svh;
+        width: 50vw;
+        padding: 5vw 0;
+        border: none;
+        background-color: black;
+        color: white;
+        border-radius: 21px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1vw;
+        cursor: pointer;
+        font-family: 'Gilroy Bold', sans-serif;
+        letter-spacing: 0.5vw;
+        text-transform: uppercase;
+        font-size: 4vw;
+        font-weight: 100;
+        box-shadow: 0 0 3px 0 white;
+    }
+
+    .bannerButtonIcon {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .backImage {
+        display: none;
+        position: absolute;
+        width: 50vw;
+        transform: translateY(10svh);
+        justify-self: flex-end;
+        align-self: flex-end;
+        height: 50vw;
+        scale: 0.9;
+        background-image: url('../../assets/quizBannerImage.png');
+        z-index: 10;
+        background-position: center;
+        background-size: cover;
+        background-clip: content-box;
+    }
+
+    .quizCheckbox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1vw;
+        font-size: 2.8vw;
+
+        input {
+            appearance: none;
+            width: 3vw;
+            cursor: pointer;
+            height: 3vw;
+            background-color: #fff;
+            border-radius: 20%;
+            z-index: 10;
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+            max-width: 100%;
+            background-color: aliceblue;
+            border-radius: 32px;
+            color: black;
+            font-size: 4vw;
+            text-align: center;
+            font-family: 'Gilroy Bold', sans-serif;
+            font-weight: 500;
+            padding: 1vw 5vw;
+            width: 90%;
+            height: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        input:checked+label {
+            background-color: #007CF8;
+            color: white;
+        }
+    }
+
+    .checkboxIcon {
+        display: none;
+        position: absolute;
+        z-index: 13;
+        cursor: pointer;
+        user-select: none;
+        transition: 1s;
+        transform: translateX(0.5vw);
+        width: 4vw;
+        height: 4vw;
+        color: black;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2vw;
+        margin-top: 2svh;
+        row-gap: 1svh;
+
+        button {
+            font-family: 'Gilroy', sans-serif;
+            font-size: 4vw;
+            display: flex;
+            padding: 3vw 7vw;
+            justify-content: center;
+            align-items: center;
+            background-color: grey;
+            color: aliceblue;
+            border-radius: 12px;
+            border: none;
+            height: max-content;
+            cursor: pointer;
+            box-shadow: 3px 4px 2px 1px rgba(0, 0, 0, 0.3);
+            font-weight: 500;
+        }
+    }
+
+    .finalTitle {
+        font-weight: 700;
+        margin-top: 3svh;
+        font-size: 4vw;
+        align-self: center;
+    }
+
+    .finalContent {
+        display: flex;
+        flex-direction: column;
+        min-height: 40svh;
+        padding-bottom: 5svh;
+        height: auto;
+
+        * {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+    }
+
+    .finalPrice {
+        align-self: center;
+        font-size: 4.5vw;
+        font-weight: 600;
+        font-family: 'Gilroy Bold', sans-serif;
+        margin-top: 0.5vw;
+    }
+
+    .finalDesc {
+        margin-top: 3vw;
+        font-weight: 300;
+        font-size: 3.1vw;
+        transform: translateX(1vw);
+        margin-bottom: 1svh;
+        line-height: 2.9vw;
+        max-width: 90%;
+        align-self: center;
+        text-align: center;
+        color: white;
+    }
+
+    .finalInputs {
+        display: flex;
+        margin-top: 3svh;
+        margin-bottom: 5vw;
+        flex-direction: column;
+        row-gap: 5vw;
+    }
+
+    .finalInputPair {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 95vw;
+        max-width: 95%;
+        row-gap: 2vw;
+
+        * {
+            font-family: 'Nunito Sans', Courier;
+            font-weight: 300;
+        }
+
+        label {
+            font-size: 3.5vw;
+            font-weight: 300;
+            padding-left: 2vw;
+            width: 73vw;
+            font-family: 'Gilroy Light', sans-serif;
+            color: black;
+            transform: translateX(1vw);
+            color: white;
+        }
+
+        input {
+            padding: 2vw 3vw;
+            border-radius: 21px;
+            outline: none;
+            width: 72vw;
+            font-family: 'Gilroy Light', sans-serif;
+            color: black;
+            border: none;
+            font-size: 3vw;
+            box-shadow: 2px 4px 2px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        textarea {
+            padding: 3vw;
+            border-radius: 21px;
+            outline: none;
+            border: none;
+            font-size: 3vw;
+            width: 72vw;
+            font-family: 'Gilroy Light', sans-serif;
+            color: black;
+            min-height: 8vw;
+            resize: none;
+            box-shadow: 2px 4px 2px 1px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .doneContainer {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        padding: 2vw;
+        padding-left: 8vw;
+        font-family: 'Nunito Sans', sans-serif;
+
+        h5 {
+            margin-top: 10svh;
+            font-size: 4.5vw;
+            font-family: 'Gilroy Heavy', sans-serif;
+            margin-bottom: 5svh;
+        }
+
+        h6 {
+            font-size: 3.8vw;
+            max-width: 95%;
+            font-weight: 200;
+            margin: 0;
+        }
+
+        p {
+            font-size: 4.5vw;
+            max-width: 95%;
+            font-weight: 200;
+            margin: 0;
+            margin-top: 5svh;
+        }
+    }
+}

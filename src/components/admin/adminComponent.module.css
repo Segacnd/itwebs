@@ -1,0 +1,426 @@
+.loginComponent {
+    display: flex;
+    width: 100%;
+    height: 85svh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer {
+    width: 60vw;
+    height: 80svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.loginHeading {
+    margin: 0;
+    margin-top: 5svh;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.loginInputPair {
+    margin-top: 5svh;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 1vw;
+    width: 30vw;
+    align-items: flex-start;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.loginInputPair label {
+    font-size: 1.5vw;
+    letter-spacing: 0.1vw;
+}
+
+.loginInputPair input {
+    width: 100%;
+    height: 3vw;
+    font-family: 'Nunito Sans', sans-serif;
+    outline: none;
+    padding: 1svh 1vw;
+    font-size: 1.2vw;
+    font-weight: 300;
+    color: white;
+    /* From https://css.glass */
+    background: rgba(47, 45, 45, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    border: 1px solid rgba(47, 45, 45, 0.4);
+}
+
+.loginInputPair button {
+    width: 15vw;
+    align-self: center;
+    height: 3.5vw;
+    font-size: 1.4vw;
+    border-radius: 21px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: none;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: 400;
+    transition: 0.7s;
+}
+
+.loginInputPair button:hover {
+    /* From https://css.glass */
+    background: rgba(58, 73, 177, 0.45);
+    border-radius: 21px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(10.2px);
+    border: 1px solid rgba(58, 73, 177, 0.4);
+}
+
+.panelComponent {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+}
+
+.panelHeading {
+    width: 70vw;
+    margin-top: 10svh;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    column-gap: 5vw;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2vw;
+    margin-bottom: 10svh;
+}
+
+.panelContainer {
+    align-self: center;
+    display: grid;
+    width: 80vw;
+    height: auto;
+    margin-top: 5svh;
+    grid-template: repeat(auto-fill, minmax(10vw,10vw))/repeat(4, 1fr);
+    grid-gap: 3vw;
+}
+
+.panelItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.72);
+    height: 10vw;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    transition: 0.7s;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+}
+
+.panelItem:hover {
+    box-shadow: 0 0 12px 3px #007CF8;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.requestList {
+    display: flex;
+    width: 90vw;
+    align-self: center;
+    background: rgba(0, 0, 0, 0.72);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.requestItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr;
+    width: 90vw;
+    height: 5svh;
+    padding: 2svh;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.requestItemButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    height: 5svh;
+    width: 80%;
+    border-radius: 16px;
+    background-color: rgba(53, 18, 195, 0.2);
+    box-shadow: 0 4px 30px rgba(53, 18, 195, 0.5);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(53, 18, 195, 0.5);
+}
+
+.modalComponent {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100svh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.commentContainer {
+    z-index: 21;
+    background-color: white;
+    width: 60vw;
+    height: 80svh;
+    display: flex;
+    padding: 0 2vw;
+    flex-direction: column;
+    align-self: center;
+}
+
+.commentText {
+    margin-top: 10svh;
+    color: black;
+    width: 45vw;
+}
+
+.adminHead {
+    transition: 1s;
+    color: white;
+    cursor: pointer;
+}
+
+.adminHead:hover {
+    color: #007CF8;
+}
+
+.changeLogContainer {
+    width: 70vw;
+    height: 80svh;
+    display: flex;
+    padding: 2vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 21px;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+.changeLogInputs {
+    display: flex;
+    margin-top: 10svh;
+    flex-direction: column;
+    row-gap: 5svh;
+    button{
+        width: 15vw;
+        height: 5svh;
+        border-radius: 21px;
+        cursor: pointer;
+        transition: 1s;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    button:hover{
+        box-shadow: 0 0 20px 4px #007CF8;
+    }
+}
+
+.changeLogInputPair {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    row-gap: 2svh;
+    label{
+        color: black;
+    }
+    input {
+        background-color: rgba(0, 0, 0, 0.26);
+        backdrop-filter: blur(50px);
+        border-radius: 21px;
+        -webkit-backdrop-filter: blur(50px);
+        width: 80%;
+        height: 5svh;
+        outline: none;
+        padding: 1svh 1vw;
+        color: white;
+        transition: 1s;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.08vw;
+    }
+
+    input:focus {
+        outline: none;
+        box-shadow: 0 0 12px 3px black;
+    }
+
+    
+}
+
+.requestAdminItem{
+    display: grid;
+    grid-template-columns: 6vw 12vw 12vw 12vw 12vw 12vw 6vw 18vw;
+    padding: 2svh;
+    width:100%;
+    column-gap: 1svh;
+    *{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.requestItemManager{
+    cursor: pointer;
+}
+
+.createModerModalContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1.5vw;
+    border-radius: 21px;
+    flex-direction: column;
+    width: 60vw;
+    height: 80svh;
+    align-items: center;
+}
+.createModerInputs{
+    margin-left: 2vw;
+    align-self: flex-start;
+    margin-top: 10svh;
+    width: 100%;
+    display: grid;
+    grid-template: repeat(2,10svh)/repeat(2,25vw);
+    gap: 5svh;
+    button{
+        width:15vw;
+        height: 10svh;
+        margin-right: 10vw;
+        border-radius: 21px;
+        border:none;
+        font-family: 'Nunito Sans', sans-serif;
+        cursor: pointer;
+        transition: 1s;
+        font-size: 1.2vw;
+    }
+    button:hover{
+        color: #007CF8;
+        box-shadow: 0 0 10px 4px #007CF8;
+    }
+}
+
+.createModerInputPair{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2svh;
+    width: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+    color: gray;
+    font-size: 0.9vw;
+    input{
+        height: 5svh;
+        border-radius: 21px;
+        padding: 1vw;
+        color: gray;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1.1vw;
+        overflow: hidden;
+        outline: none;
+        transition: 1s;
+    }
+    input:focus{
+        box-shadow: 0 0 5px 2px #007CF8;
+        color:black;
+    }
+}
+.moderatorsItem{
+    display: grid;
+    grid-template-columns: 10vw 10vw 25vw 25vw 10vw 10vw;
+    div{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        padding: 3svh 0;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
+        font-size: 1.2vw;
+    }
+}
+.moderatorDelete{
+    width: 8vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito Sans';
+    background-color: black;
+    color:white;
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+.allRequestsFilter{
+    width: 50vw;
+    align-self: center;
+    margin-bottom: 5vh;
+    box-shadow: 0 0 1px 3px white;
+    font-size: 1.2vw;
+    font-family: 'Nunito Sans',sans-serif;
+    color: white;
+    background-color: #1a1a1a;
+    border-radius: 21px;
+    padding: 2svh 1vw;
+}
+
+.newRequestList{
+    display: flex;
+    flex-direction: column;
+    height: 50svh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2svh 0;
+    row-gap: 2svh;
+    align-items: center;
+}

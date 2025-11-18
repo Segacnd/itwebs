@@ -1,0 +1,15 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  z-index: 7;
+  width: 100vw;
+  min-height: 85svh;
+  margin-top: 15svh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+@media (max-width:800px) {
+  .page{
+    margin-top: 10svh;
+  }
+}

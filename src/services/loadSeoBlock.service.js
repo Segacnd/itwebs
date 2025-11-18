@@ -1,0 +1,19 @@
+'use server'
+import axios from 'axios';
+import '../../envConfig';
+
+export const loadSeoBlock = async (page) => {
+    try{
+        const response = await axios.get(`${process.env.BACKSEC}://${process.env.BACKHOST}:${process.env.BACKPORT}/app/seo/${page}`,{
+            timeout:5000,
+            headers:{
+                'Cache-Control':'no-cache',
+            }
+        })
+        const {data} = response ;
+        return data;
+    }catch(err){
+        console.log(err.response?err.response?.data?.message:err?.message);
+        return null;
+    }
+}
