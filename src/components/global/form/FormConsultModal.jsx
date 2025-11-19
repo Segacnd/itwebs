@@ -14,6 +14,7 @@ export default function FormConsultModal({ setLoading }) {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -27,13 +28,12 @@ export default function FormConsultModal({ setLoading }) {
   });
 
   const onSubmit = (data) => {
-    setLoading(true);
     if (!data.allow) {
       return toast.error(
         "Вы не приняли соглашение на обработку персональных данных"
       );
     }
-
+    setLoading(true);
     sendConsultRequest(data)
       .then((res) => {
         toast.success(res);
@@ -41,6 +41,10 @@ export default function FormConsultModal({ setLoading }) {
       })
       .catch((err) => toast.error(err?.message))
       .finally(() => setLoading(false));
+  };
+  const handlePhoneChange = (e) => {
+    const digitsOnly = e.target.value.replace(/\D/g, "");
+    setValue("phone", digitsOnly, { shouldValidate: true });
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.modalItems}>
@@ -80,12 +84,7 @@ export default function FormConsultModal({ setLoading }) {
         <input
           type="text"
           {...register("phone")}
-          onChange={(e) =>
-            e.target.value
-              .split("")
-              .filter((item) => /[0-9]/.test(item))
-              .join("")
-          }
+          onChange={handlePhoneChange}
         />
       </div>
       <div className={styles.inputPair}>

@@ -18,7 +18,7 @@ const Header = () => {
 
         <div className={styles.navigation}>
           {HEADER_NAVIGATION.map((item) => (
-            <Link key={item.title} className={styles.navLink} href={item.link}>
+            <Link key={item.title} className={item.title === 'Экспресс разработка'? styles.expressLink :styles.navLink} href={item.link}>
               {item.title}
               <div className={styles.linkUnderline}></div>
             </Link>

@@ -59,11 +59,13 @@
   animation: spin 5s infinite ease-in-out;
 }
 .modalComponent[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
   background-color: rgba(0, 0, 0, 0.2);
 }
 .modalContainer[data-open="true"] {
   opacity: 1;
-  scale: 1;
+  transform: scale(1);
 }
 .modalComponent {
   position: fixed;
@@ -76,22 +78,27 @@
   z-index: 99;
   transition: 1s;
   align-items: center;
-  background-color: "none";
+
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0); 
+  transition: opacity 0.5s ease, background-color 0.5s ease;
 }
 
 .modalContainer {
   width: 45vw;
   padding: 2vh;
-  opacity: 0;
-  scale: 0;
-  transition: 1s;
-  transition: opacity 0.3s ease, scale 0.3s ease;
+
   height: max-content;
   padding-bottom: 5svh;
   display: flex;
   flex-direction: column;
   background-color: #1a1a1a;
   border-radius: 21px;
+
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .modalCross {

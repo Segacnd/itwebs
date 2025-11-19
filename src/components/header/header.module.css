@@ -385,29 +385,38 @@
     text-decoration: none;
     font-size: 5vw;
   }
-
+  .mobileMenuCloseButton {
+    cursor: pointer;
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    z-index: 100;
+    right: 5vw;
+    top: 5vw;
+  }
   .logo {
     padding-left: 1svw;
   }
 
   /* checkbox */
-  #menuToggle:checked ~ .mobileMenuComponent {
+  /* input checkbox и mobile находятся на одном уровне   */
+  .menuToggle:checked ~ .mobileMenuComponent {
     height: 100svh;
   }
 
-  #menuToggle:checked ~ .mobileMenuComponent .mobileMenuLinkss {
+  .menuToggle:checked ~ .mobileMenuComponent .mobileMenuLinkss {
     top: 0;
   }
 
-  #menuToggle:checked ~ .mobileMenuComponent .mobileMenuDown {
+  .menuToggle:checked ~ .mobileMenuComponent .mobileMenuDown {
     opacity: 1;
   }
 
-  #menuToggle:checked + .container .mobileMenuOpenButton .burgerImg {
+  .menuToggle:checked + .container .mobileMenuOpenButton .burgerImg {
     opacity: 0;
   }
 
-  #menuToggle:checked + .container .mobileMenuOpenButton .closeImg {
+  .menuToggle:checked + .container .mobileMenuOpenButton .closeImg {
     opacity: 1;
   }
 }

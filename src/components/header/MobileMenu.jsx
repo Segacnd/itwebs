@@ -8,12 +8,36 @@ const MobileMenu = () => {
   return (
     <div className={styles.mobileMenuComponent}>
       <div className={styles.mobileMenuInner}>
+        <label
+          htmlFor="menuToggle"
+          className={styles.mobileMenuCloseButton}
+        >
+          <Icon
+            style={{
+              alignSelf: "flex-end",
+              zIndex: 99,
+              position: "absolute",
+              width: "7vw",
+              height: "7vw",
+            }}
+            icon="line-md:close"
+            color="gray"
+          />
+        </label>
         <div className={styles.mobileMenuLinkss}>
           <Link className={styles.navLink} href="/">
             Главная
           </Link>
           {HEADER_NAVIGATION.map((item) => (
-            <Link key={item.title} className={styles.navLink} href={item.link}>
+            <Link
+              key={item.title}
+              className={
+                item.title === "Экспресс разработка"
+                  ? styles.expressLink
+                  : styles.navLink
+              }
+              href={item.link}
+            >
               {item.title}
             </Link>
           ))}
