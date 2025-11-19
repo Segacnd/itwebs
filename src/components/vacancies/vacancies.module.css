@@ -1,0 +1,747 @@
+.headText {
+    align-self: center;
+    width: 60vw;
+    text-align: center;
+    margin-top: 5svh;
+    font-weight: 500;
+    font-size: 1.8vw;
+}
+
+.vacancieBlur {
+    position: absolute;
+    width: 10vw;
+    align-self: center;
+    justify-self: center;
+    z-index: 7;
+    border-radius: 21px;
+    height: 50svh;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.backgroundImage {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 10vw;
+    height: 50svh;
+    border-radius: 21px;
+    padding: 1vw;
+}
+
+.vacancieItem {
+    overflow: hidden;
+    display: flex;
+    transition: 1s;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 10vw;
+    padding: 1vw;
+    height: 50svh;
+    border-radius: 21px;
+    cursor: default;
+    padding-bottom: 2vw;
+
+    * {
+        transition: 1s;
+        user-select: none;
+    }
+}
+
+.vacancieDesc {
+    opacity: 0;
+
+}
+
+.list {
+    display: flex;
+    margin-top: 5svh;
+    align-self: center;
+    justify-content: center;
+    overflow: auto;
+    width: 84vw;
+    column-gap: 1vw;
+}
+
+.vacancieDesc {
+    opacity: 0;
+}
+
+.vacancieItemLink {
+    opacity: 0;
+}
+
+.vacancieButton {
+    background-color: #007CF8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 21px;
+    cursor: pointer;
+    margin-top: 2svh;
+    z-index: 9;
+}
+
+.vacancieTitle {
+    transform: rotateZ(-90deg) translateY(-5vw) translateX(-5vw);
+    text-align: start;
+    color: white;
+    font-weight: 600;
+    z-index: 9;
+    width: max-content;
+}
+
+.vacancieItem:hover {
+    width: 40vw;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 2vw;
+
+    .backgroundImage {
+        width: 40vw;
+        justify-self: flex-start;
+
+        height: 50svh;
+    }
+
+    .vacancieBlur {
+        width: 40vw;
+        transform: translateX(1vw);
+    }
+
+    .vacancieTitle {
+        margin-left: 1vw;
+        z-index: 9;
+        margin-bottom: 5svh;
+        transform: rotateZ(0);
+    }
+
+    .vacancieDesc {
+        margin-left: 1vw;
+        opacity: 1;
+        max-width: 70%;
+        z-index: 9;
+        color: white;
+    }
+
+    .vacancieItemLink {
+        opacity: 1;
+        margin-left: 1vw;
+        z-index: 9;
+        margin-bottom: 2svh;
+    }
+}
+
+.advantagesBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formBlock {
+    margin-bottom: 20svh;
+    max-height: max-content;
+    height: auto;
+}
+
+.advantagesContainer {
+    width: 99vw;
+    background-color: #1a1a1a;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35svh;
+}
+
+.advantagesHeading {
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    margin-bottom: 10svh;
+}
+
+.advantageName {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.advantageItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2svh;
+    align-items: center;
+    width: 100%;
+}
+
+.formHeading {
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    margin-left: 7vw;
+}
+
+.formNameInput {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+
+    input {
+        margin: 2svh 0;
+        width: 100%;
+        height: 6svh;
+        outline: none;
+        border-radius: 21px;
+        background-color: #1a1a1a;
+        transition: 1s;
+        border: 1px solid #007CF8;
+        padding: 0.3vw 1vw;
+        font-size: 1.1vw;
+        color: white;
+    }
+    input:focus{
+        box-shadow: 0 0 15px 0 #007CF8;
+    }
+}
+
+.formLabel {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.3vw;
+    margin-left: 0.5vw;
+}
+
+.formLineInput {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+
+    input {
+        margin: 2svh 0;
+        width: 100%;
+        height: 6svh;
+        border-radius: 21px;
+        background-color: #1a1a1a;
+        transition: 1s;
+        border: 1px solid #007CF8;
+        padding: 0.3vw 1vw;
+        font-size: 1.1vw;
+        outline: none;
+        color: white;
+    }
+
+    input:focus{
+        box-shadow: 0 0 15px 0 #007CF8;
+    }
+
+    textarea {
+        margin: 2svh 0;
+        width: 100%;
+        height: 12svh;
+        border-radius: 21px;
+        background-color: #1a1a1a;
+        transition: 1s;
+        border: 1px solid #007CF8;
+        padding: 1vw;
+        font-size: 1.1vw;
+        resize: none;
+        outline: none;
+        color: white;
+    }
+    textarea:focus{
+        box-shadow: 0 0 15px 0 #007CF8;
+    }
+}
+
+.vacancieForm {
+    margin-left: -1vw;
+    margin-top: -5svh;
+    transform: scale(0.85);
+    margin-bottom: -20svh;
+}
+
+.formFileArea {
+    margin: 5svh 0;
+    transition: 1s;
+    height: 30svh;
+    border: 1px dotted #007CF8;
+    border-radius: 21px;
+    display: flex;
+    cursor: pointer;
+    width: 57vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+
+    input {
+        opacity: 0;
+    }
+
+    div {
+        padding: 5svh 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            max-width: 50%;
+            user-select: none;
+            transition: 1s;
+        }
+    }
+}
+
+.formFileArea:hover{
+    box-shadow: 0 0 5px 0 white;
+    *{
+        font-weight: 500;
+    }
+}
+
+.formFile {
+    position: absolute;
+    z-index: 9;
+    height: 30svh;
+    width: 57vw;
+    cursor: pointer;
+}
+
+.formButton {
+    background-color: #1a1a1a;
+    border: 1px solid #007CF8;
+    color: white;
+    width: 57vw;
+    cursor: pointer;
+    height: 7svh;
+    border-radius: 21px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.vacancieText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1vw;
+}
+
+.vacancieButtonIcon {
+    width: 2vw;
+    height: 2vw;
+}
+
+.advantageItemIcon {
+    width: 8vw;
+    height: 8vw;
+}
+
+.formLinePair {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4vw;
+}
+
+.formFileIcon {
+    width: 6vw;
+    height: 6vw;
+}
+
+@media (max-width:800px) {
+    .headText {
+        align-self: center;
+        width: 80vw;
+        text-align: start;
+        margin-top: 5svh;
+        font-weight: 400;
+        font-size: 3.5vw;
+    }
+
+    .vacancieBlur {
+        display: none;
+        position: absolute;
+        width: 10vw;
+        align-self: center;
+        justify-self: center;
+        z-index: 7;
+        border-radius: 21px;
+        height: 50svh;
+        padding: 1vw;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .backgroundImage {
+        width: 79vw;
+        position: relative;
+        height: 49vw;
+    }
+
+    .vacancieItem {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        overflow: hidden;
+        background-color: #1a1a1a;
+        display: flex;
+        transition: 1s;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        width: 80vw;
+        min-width: 80vw;
+        padding: 1vw;
+        height: max-content;
+        border-radius: 21px;
+        padding-bottom: 3svh;
+        cursor: default;
+
+        * {
+            transition: 1s;
+            user-select: none;
+        }
+    }
+
+    .vacancieDesc {
+        opacity: 0;
+
+    }
+
+    .list {
+        display: flex;
+        margin-top: 5svh;
+        align-self: center;
+        justify-content: flex-start;
+        overflow: auto;
+        width: 90vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        margin-left: 5vw;
+        flex-direction: row;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        column-gap: 8vw;
+    }
+
+    .vacancieDesc {
+        opacity: 1;
+        width: fit-content;
+        padding-right: 3vw;
+        font-size: 3.2vw;
+        margin-top: 1svh;
+    }
+
+    .vacancieItemLink {
+        opacity: 1;
+
+    }
+
+    .vacancieButton {
+        background-color: #007CF8;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2vw;
+        border: none;
+        border-radius: 21px;
+        cursor: pointer;
+        margin-top: 2svh;
+        padding: 2vw;
+        z-index: 9;
+        text-transform: lowercase;
+        font-weight: 100;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 3.2vw;
+    }
+
+    .vacancieTitle {
+        transform: none;
+        text-align: start;
+        color: white;
+        font-weight: 600;
+        align-self: flex-start;
+        z-index: 9;
+        width: max-content;
+    }
+
+    .vacancieItem:hover {
+        width: 40vw;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        .vacancieBlur {
+            width: 40vw;
+            transform: translateY(1vw);
+        }
+
+        .vacancieTitle {
+            margin-left: 1vw;
+            z-index: 9;
+            margin-bottom: 2svh;
+            transform: rotateZ(0);
+        }
+
+        .vacancieDesc {
+            margin-left: 1vw;
+            opacity: 1;
+            max-width: 70%;
+            z-index: 9;
+            color: white;
+        }
+
+        .vacancieItemLink {
+            opacity: 1;
+            margin-left: 1vw;
+            z-index: 9;
+        }
+    }
+
+    .advantagesBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantagesContainer {
+        align-self: center;
+        width: 80vw;
+        background-color: #1a1a1a;
+        color: white;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, 40vw);
+        align-content: center;
+        height: fit-content;
+    }
+
+    .advantagesHeading {
+        align-self: center;
+        text-transform: uppercase;
+        font-size: 4vw;
+        font-weight: 700;
+        font-family: 'Nunito Sans', sans-serif;
+        margin-bottom: 5svh;
+    }
+
+    .advantageName {
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Gilroy', sans-serif;
+        font-size: 3.5vw;
+    }
+
+    .advantageItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 2svh;
+        align-items: center;
+        width: 40vw;
+        height: 25svh;
+        font-size: 4vw;
+        font-weight: 300;
+    }
+
+    .advantageItemIcon{
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .formHeading {
+        text-transform: uppercase;
+        font-size: 6vw;
+        max-width: 80vw;
+        margin-left: 7vw;
+        margin-bottom: 1svh;
+    }
+
+    .formNameInput {
+        display: flex;
+        margin: 1svh 0;
+        flex-direction: column;
+        width: 90vw;
+        row-gap: 0;
+
+        input {
+            margin: 1svh 0;
+            width: 100%;
+            height: 5svh;
+            border-radius: 21px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            transition: 1s;
+            border: 1px solid #007CF8;
+            outline: none;
+            padding: 0 3vw;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 4vw;
+            font-weight: 100;
+            color: white;
+        }
+    }
+
+    .formLinePair {
+        display: flex;
+        flex-direction: column;
+        column-gap: 4vw;
+    }
+
+    .formLabel {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 5vw;
+        margin-left: 2vw;
+        font-weight: 100;
+    }
+
+    .formLineInput {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        
+        input {
+            margin: 1svh 0;
+            width: 100%;
+            height: 5svh;
+            border-radius: 21px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            transition: 1s;
+            border: 1px solid #007CF8;
+            outline: none;
+            padding: 0 3vw;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 4vw;
+            font-weight: 100;
+            color: white;
+        }
+
+        textarea {
+            margin: 2svh 0;
+            width: 90vw;
+            height: 12svh;
+            border-radius: 21px;
+            background-color: #1a1a1a;
+            transition: 1s;
+            border: 1px solid #007CF8;
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            padding: 2vw;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 3.5vw;
+            font-weight: 100;
+            outline: none;
+            resize: none;
+            color: white;
+        }
+    }
+
+    .vacancieForm {
+        margin-left: -1vw;
+        margin-top: -10svh;
+        transform: scale(0.85);
+        margin-bottom: 5svh;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formFileArea {
+        margin: 0;
+        margin-top: 5svh;
+        margin-bottom: 5svh;
+        height: 25svh;
+        border: none;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23007CF8FF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        border-radius: 16px;
+        display: flex;
+        cursor: pointer;
+        width: 95vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            opacity: 0;
+        }
+
+        div {
+            padding: 5svh 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                max-width: 90%;
+                margin-left: 4vw;
+                font-weight: 100;
+                font-size: 4vw;
+                user-select: none;
+            }
+        }
+    }
+
+    .formFile {
+        position: absolute;
+        z-index: 9;
+        height: 25svh;
+        width: 90vw;
+        cursor: pointer;
+    }
+
+    .formButton {
+        border: 1px solid #007CF8;
+        color: white;
+        width: 94%;
+        margin-bottom: -20svh;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        cursor: pointer;
+        height: 7svh;
+        border-radius: 21px;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .vacancieText {
+        padding-left: 4vw;
+        margin-top: 2svh;
+    }
+
+    .vacancieButtonIcon {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .formFileIcon {
+        width: 10vw;
+        height: 10vw;
+    }
+    .formBlock{
+    }
+}

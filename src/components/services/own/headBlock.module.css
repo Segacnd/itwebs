@@ -1,0 +1,117 @@
+.headText {
+    width: 88vw;
+    padding-left: 7vw;
+    padding-right: 5vw;
+}
+
+.headTitle {
+    font-size: 2.8vw;
+    height: 8svh;
+    margin: 0;
+    font-weight: 900;
+}
+
+.headSubtitle {
+    font-size: 1.8vw;
+    font-weight: 200;
+    margin: 0;
+    height: 16svh;
+}
+
+.headTitleMotion {
+    height: 16svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.headTitleMotionContainer {
+    width: 100%;
+    margin: 4svh 0;
+    height: 8svh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.headSubMotionContainer {
+    height: 16svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.headSubMotion {
+    height: 32svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media (max-width:800px) {
+    .headText {
+        margin-top: 0;
+        padding-top: 0;
+        width: 86vw;
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .headTitle {
+        font-size: 5vw;
+        height: fit-content;
+        margin: 0;
+        font-weight: 900;
+    }
+
+    .headSubtitle {
+        font-size: 4vw;
+        font-weight: 100;
+        margin: 0;
+        height: 16svh;
+    }
+
+    .headTitleMotion {
+        height: 10svh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .headTitleMotionContainer {
+        width: 100%;
+        margin: 4svh 0;
+        margin-bottom: 0;
+        height: 10svh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .headSubMotionContainer {
+        height: 16svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .headSubMotion {
+        height: 32svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .block{
+        margin-bottom: 5svh;
+        height: fit-content;
+        min-height: fit-content;
+    }
+}

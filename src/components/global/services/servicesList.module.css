@@ -1,0 +1,260 @@
+.listContainer {
+    padding-left: 3vw;
+    width: 92vw;
+    padding-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5svh;
+}
+
+.listItem {
+    width: 86vw;
+    background-color: rgba(37, 37, 37, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 21px;
+    height: 25svh;
+    padding: 2vw 4vw;
+    display: grid;
+    grid-template-columns: 7fr 2fr 1fr;
+    color: white;
+}
+
+.itemInfoContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.itemIconContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.itemIcon {
+    width: 10vw;
+    height: 10vw;
+}
+
+.itemButtonContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.goIcon {
+    width: 2.5vw;
+    height: 2.5vw;
+    transition: 1s;
+    transform: scaleX(1.5);
+}
+
+.goIcon:hover {
+    color: #007CF8;
+}
+
+.itemWays {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
+
+    span {
+        font-size: 1.1vw;
+        font-weight: 300;
+    }
+}
+
+.textIcon {
+    width: 2vw;
+    height: 2vw;
+    transform: translateY(-0.3vw);
+    color: #007CF8;
+}
+
+.descCircle {
+    width: 0.7vw;
+    height: 0.7vw;
+    display: flex;
+    justify-content: center;
+    transform: translateX(0.2vw);
+    align-items: center;
+    border-radius: 50%;
+    background-color: #007CF8;
+}
+
+.itemDesc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
+    font-size: 1.1vw;
+}
+
+.itemInfoName {
+    font-family: 'Gilroy Bold', sans-serif;
+    font-size: 1.6vw;
+    margin-top: 2svh;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5svh;
+}
+
+.itemText{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2svh;
+}
+
+@media (max-width:800px) {
+    .listContainer {
+        padding-left: 2vw;
+        width: 93vw;
+        padding-right: 3vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3svh;
+    }
+
+    .listItem {
+        width: 86vw;
+        background-color: #1a1a1a;
+        border-radius: 21px;
+        min-height: 20svh;
+        height: fit-content;
+        padding: 2vw 5vw;
+        display: flex;
+        flex-direction: row;
+        padding-top: 5vw;
+        color: white;
+    }
+
+    .itemInfoContent {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .itemIconContent {
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        justify-content: flex-end;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        transform: translateY(18svh) translateX(85svw);
+        z-index: 50;
+        position: absolute;
+        overflow-x: visible;
+        *{
+            padding-left: 10vw;
+        }
+    }
+
+    .itemIcon {
+        width: 15vw;
+        height: 15vw;
+        position: absolute;
+        z-index: 60;
+    }
+
+    .itemButtonContent {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-items: flex-start;
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        width: 85vw;
+        margin-right: 0;
+        justify-content: flex-end;
+    }
+
+    .goIcon {
+        width: 6vw;
+        height: 6vw;
+        transition: 1s;
+        transform: scaleX(1.3);
+    }
+
+    .goIcon:hover {
+        color: #007CF8;
+    }
+
+    .itemWays {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: max-content;
+        column-gap: 2vw;
+        max-width: max-content;
+        span {
+            font-family: 'Gilroy', sans-serif;
+            position: relative;
+            line-height: 3.5vw;
+            font-size: 4vw;
+            font-weight: 500;
+        }
+    }
+
+    .textIcon {
+        appearance: none;
+        width:5vw;
+        height: 5vw;
+        transform: translateY(0vw);
+        color: #007CF8;
+        svg{
+            width:10vw;
+
+            height: 10vw;
+        }
+    }
+
+    .descCircle {
+        width: 4vw;
+        height: 4vw;
+        min-width: 4vw;
+        display: flex;
+        justify-content: center;
+        transform: translateX(-0.5vw);
+        border-radius: 50%;
+        background-color: #007CF8;
+    }
+
+    .itemDesc {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 3.4vw;
+        column-gap: 2.7vw;
+        margin: 1vw 0;
+        font-weight: 500;
+        line-height: 3.3vw;
+        text-wrap: wrap;
+        max-width: 70vw;
+        span{
+            text-align: justify;
+            
+        }
+    }
+
+    .itemInfoName {
+        font-family: 'Gilroy Bold', sans-serif;
+        margin-top: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 4vw;
+        line-height: 4vw;
+        margin-bottom: 5vw;
+        max-width: 80vw;
+    }
+    .itemText{
+        row-gap: 0;
+    }
+}

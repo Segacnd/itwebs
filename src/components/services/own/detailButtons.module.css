@@ -1,0 +1,502 @@
+.modalComponent {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100svh;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainer {
+    display: fixed;
+    flex-direction: column;
+    min-height: 50svh;
+    height: max-content;
+    min-width: 40vw;
+    max-height: 90svh;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 8px;
+    z-index: 99;
+    box-shadow: 0 0 2PX 1px gray;
+    transition: 1s;
+    opacity: 1;
+    padding: 1svh 2vw;
+}
+
+.modalHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+}
+
+.buttonsContainer {
+    width: 70vw;
+    padding-left: 15vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonItem {
+    width: 20vw;
+    height: 4vw;
+    color: white;
+    border: 2px solid #007CF8;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: all 1s;
+    font-size: 0.9vw;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+}
+
+.buttonItem:active {
+    background-color: #007CF8;
+}
+.buttonItem:hover{
+    box-shadow: 12px 12px 4px 0 #007CF8;
+}
+
+.modalInputs {
+    width: 40vw;
+    padding-right: 2vw;
+    row-gap: 3svh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3svh;
+    padding-bottom: 3svh;
+}
+
+.modalInputPair {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        padding-left: 1vw;
+        margin-bottom: 0.5vw;
+        font-family: 'Gilroy',sans-serif;
+        font-size: 1.2vw;
+        letter-spacing: 0.1vw;
+        font-weight: 300;
+    }
+
+    input {
+        background-color: #1a1a1a;
+        border: 2px solid #007CF8;
+        color: white;
+        outline: none;
+        padding: 1vw;
+        border-radius: 21px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1vw;
+        height: 1svh;
+    }
+
+    textarea {
+        padding: 1vw;
+        resize: none;
+        outline: none;
+        background-color: #1a1a1a;
+        color: white;
+        border: 2px solid #007CF8;
+        border-radius: 8px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1vw;
+        overflow: hidden;
+    }
+}
+
+.modalPoliticyLine {
+    padding-left: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
+
+    .checkboxIcon {
+        position: absolute;
+        opacity: 0;
+        scale: 0;
+        transform: translateX(0.2vw);
+        width: 1.1vw;
+        height: 1.1vw;
+    }
+
+    input {
+        appearance: none;
+        transition: 1s;
+        width: 1vw;
+        height: 1vw;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    input:checked {
+        background-color: #007CF8;
+    }
+}
+
+.modalSendButton {
+    background-color: #1a1a1a;
+    border: 2px solid #007CF8;
+    color: white;
+    padding: 1.2svh 0;
+    z-index: 99;
+    border-radius: 6px;
+    cursor: pointer;
+    *{
+        user-select: all;
+    }
+}
+
+.modalSendButton:active {
+    background-color: #007CF8;
+}
+
+.paymentsBlock {
+    display: flex;
+    flex-direction: column;
+    padding-left: 7vw;
+    width: 88vw;
+    row-gap: 5svh;
+}
+
+.paymentItemContainer {
+    display: grid;
+    border-radius: 16px;
+    background-color: #1a1a1a;
+    grid-template-columns: 1fr 19fr;
+}
+
+.paymentItemContent {
+    padding: 2svh 1vw;
+}
+
+.paymentItemName {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.3vw;
+}
+
+.paymentItemDesc {
+    margin: 0;
+    font-weight: 300;
+    margin-top: 1svh;
+    font-size: 1.2vw;
+}
+
+.paymentItemStage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    column-gap: 0.5vw;
+}
+
+.paymentItemStages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1svh;
+    margin-top: 3svh;
+    margin-bottom: 3svh;
+}
+
+.paymentItemStageText {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1vw;
+}
+
+.paymentAdvantage {
+    border: 1px solid #007CF8;
+    padding: 0.5vw;
+    border-radius: 21px;
+    font-size: 1vw;
+    width: fit-content
+}
+
+.paymentItemNum {
+    padding-top: 2svh;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #007CF8;
+    align-items: center;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.closeIcon {
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+}
+
+@media (max-width:800px) {
+    .modalComponent {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100svh;
+        z-index: 90;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modalContainer {
+        display: flex;
+        flex-direction: column;
+        min-height: 50svh;
+        min-width: 40vw;
+        background-color: #1a1a1a;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 2PX 1px gray;
+        transition: 1s;
+        opacity: 0;
+        padding: 1svh 2vw;
+        width: 80vw;
+        height: max-content;
+    }
+
+    .modalHeading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2vw;
+    }
+
+    .buttonsContainer {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        row-gap: 2svh;
+        padding-left: 0;
+        margin-top: 5svh;
+    }
+
+    .buttonItem {
+        width: 80vw;
+        height: 15vw;
+        color: white;
+        border: 2px solid #007CF8;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 3vw;
+        outline: none;
+        transition: 1s;
+    }
+
+    .buttonItem:active {
+        background-color: #007CF8;
+    }
+
+    .modalInputs {
+        width: 70vw;
+        padding-right: 2vw;
+        padding-left: 3vw;
+        row-gap: 3svh;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1svh;
+        padding-bottom: 3svh;
+    }
+
+    .modalInputPair {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            padding-left: 3vw;
+            margin-bottom: 1vw;
+            font-weight: 300;
+            font-size: 3.5vw;
+        }
+
+        input {
+            background-color: #1a1a1a;
+            border: 2px solid #007CF8;
+            color: white;
+            outline: none;
+            padding: 2vw;
+            border-radius: 21px;
+            height: 2svh;
+            padding-left: 3vw;
+            font-size: 3vw;
+            font-weight: 100;
+            font-family: 'Nunito Sans',sans-serif;
+        }
+
+        textarea {
+            padding: 2vw;
+            padding-left: 3vw;
+            resize: none;
+            outline: none;
+            background-color: #1a1a1a;
+            color: white;
+            border: 2px solid #007CF8;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 3vw;
+            font-weight: 100;
+            font-family: 'Nunito Sans',sans-serif;
+        }
+    }
+
+    .modalPoliticyLine {
+        padding-left: 1vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 3.2vw;
+        column-gap: 2vw;
+        font-weight: 300;
+
+        .checkboxIcon {
+            position: absolute;
+            opacity: 0;
+            scale: 0;
+            transform: translateX(1.2vw);
+            width: 5vw;
+            z-index: 12;
+            height: 5vw;
+        }
+
+        input {
+            appearance: none;
+            transition: 1s;
+            width: 7vw;
+            height: 5vw;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9;
+        }
+
+        input:checked {
+            background-color: #007CF8;
+        }
+    }
+
+    .modalSendButton {
+        background-color: #1a1a1a;
+        border: 2px solid #007CF8;
+        color: white;
+        padding: 1.2svh 0;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .modalSendButton:active {
+        background-color: #007CF8;
+    }
+
+    .paymentsBlock {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        width: 100vw;
+        row-gap: 2svh;
+        margin-top: 5svh;
+    }
+
+    .paymentItemContainer {
+        display: grid;
+        border-radius: 0;
+        background-color: #1a1a1a;
+        grid-template-columns: 2fr 18fr;
+    }
+
+    .paymentItemContent {
+        padding: 2svh 1vw;
+        padding-left: 5vw;
+    }
+
+    .paymentItemName {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    .paymentItemDesc {
+        margin: 0;
+        font-weight: 100;
+        margin-top: 1svh;
+        font-size: 3.2vw;
+        max-width: 80vw;
+    }
+
+    .paymentItemStage {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        column-gap: 2vw;
+        flex-direction: flex-start;
+    }
+
+    .paymentItemStages {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5svh;
+        margin-top: 2svh;
+        margin-bottom: 3svh;
+    }
+
+    .paymentItemStageText {
+        margin: 0;
+        font-weight: 100;
+        font-size: 3vw;
+        margin: 0;
+    }
+
+    .paymentAdvantage {
+        border: 1px solid #007CF8;
+        padding: 2vw;
+        border-radius: 21px;
+        font-size: 2.5vw;
+        font-weight: 100;
+        width: fit-content
+    }
+
+    .paymentItemNum {
+        padding-top: 2svh;
+        font-size: 3.5vw;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        background-color: #007CF8;
+        align-items: center;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .closeIcon{
+        width: 5vw;
+        height: 5vw;
+    }
+}

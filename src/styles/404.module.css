@@ -1,0 +1,125 @@
+@keyframes fromTop {
+    0% {
+        transform: translateY(-50svh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    0% {
+        transform: translateY(50svh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate3d('180deg');
+    }
+    10%{
+        transform: rotate3d('360deg');
+    }
+    20%{
+        transform: rotate3d('540deg');
+    }
+    50%{
+        transform: rotate3d('0deg')
+    }
+    100%{
+        transform: rotate3d('360deg');
+    }
+}
+
+.component {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    top:0;
+    left:0;
+    padding-top: 15svh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 85svh;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 1px solid black;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+
+    div{
+        margin-top: 5svh;
+        font-family: 'Nunito Sans',sans-serif;
+        font-weight: 200;
+        font-size: 1vw;
+        cursor: pointer;
+    }
+
+    h2 {
+        color: rgba(100, 20, 150, 0.55);
+        margin: 0;
+    }
+}
+.buttonContainer{
+    display: flex;
+    gap: 10px;
+}
+.buttonLink{
+    transform: rotateZ(0);
+    margin-top: 10svh;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    background-color: rgba(0,0,160,0.5);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    transition: 1s;
+    width: 15vw;
+    height: 10svh;
+    cursor: pointer;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2vw;
+    transition: 1s;
+    animation: spinner 2s linear forwards;
+    border-radius: 21px;
+    font-weight: 300;
+}
+.buttonLink:hover{
+    background-color: gray;
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        margin-top: 15svh;
+        transform: translateY(-50svh);
+        animation: fromTop 2s ease-out forwards;
+        margin-bottom: 0;
+        letter-spacing: 1vw;
+        font-size: 15vw;
+        color: gray;
+    }
+
+    h2 {
+        margin: 0;
+        color: aliceblue;
+        transform: translateY(50svh);
+        animation: fromBottom 1.5s ease-out forwards;
+    }
+}

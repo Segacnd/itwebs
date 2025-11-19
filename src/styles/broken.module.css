@@ -1,0 +1,133 @@
+@keyframes fromLeft {
+    0%{
+        transform: translateX(-50vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes fromRight {
+    0%{
+        transform: translateX(50vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes fromBottom {
+    0%{
+        transform: translateY(50svh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromShadow {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 85svh;
+    background-color: rgba(0,0,0,0.7);
+    *{
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 80svh;
+    align-items: center;
+    justify-content: center;
+    h2{
+        cursor: default;
+        opacity: 0;
+        scale: 0;
+        animation: fromShadow 2s ease-out forwards;
+    }
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+}
+.reloadButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 21px;
+    padding: 2svh 1vw;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1vw;
+    column-gap: 2vw;
+    color: white;
+    transition: 0.7s;
+    transform: translateX(-50vw);
+    animation: fromLeft 1s ease-out forwards;
+    cursor: pointer;
+}
+.reloadButton:hover{
+    color: black;
+}
+.backButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 21px;
+    padding: 2svh 1vw;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1vw;
+    column-gap: 2vw;
+    color: white;
+    transition: 0.7s;
+    transform: translateX(50vw);
+    animation: fromRight 1s ease-out forwards;
+    cursor: pointer;
+}
+.backButton:hover{
+    color: black;
+}
+.homeButton{
+    display: flex;
+    margin-top: 2svh;
+    flex-direction: row;
+    align-items: center;
+    background: black;
+    justify-content: center;
+    border: none;
+    border-radius: 21px;
+    font-weight: 500;
+    padding: 2svh 1vw;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 1vw;
+    column-gap: 2vw;
+    color: white;
+    transition: 0.7s;
+    cursor: pointer;
+    transform: translateY(50svh);
+    animation: fromBottom 1s ease-out forwards;
+    width: 15vw;
+}
+.homeButton:hover{
+    color: gray;
+}
+.cat{
+    opacity: 0;
+    scale: 0;
+    animation: fromShadow 1s ease-out forwards;
+}

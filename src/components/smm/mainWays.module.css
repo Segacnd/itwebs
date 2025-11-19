@@ -1,0 +1,46 @@
+@keyframes infiniteColors {
+    0%{
+        color:white;
+    }
+    50%{
+        color: #007CF8;
+    }
+    100%{
+        color:white;
+    }
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 22vw;
+    width:90vw;
+    align-self: center;
+    *{
+        font-family: 'Nunito', sans-serif;
+    }
+}
+.containerItem{
+    width: 22.5vw;
+    height: 22vw;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.containerIcon{
+    width: 7vw;
+    height: 7vw;
+    animation: infiniteColors 2s infinite;
+}
+.containerText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    text-align: center;
+    max-width: 45%;
+    font-weight: 500;
+}

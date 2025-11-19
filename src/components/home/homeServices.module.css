@@ -1,0 +1,175 @@
+.servicesContainer {
+    display: grid;
+    margin-top: 10svh;
+    width: 99vw;
+    height: 65svh;
+    grid-template-columns: repeat(7, 14.2vw);
+    background-color: white;
+}
+
+.serviceItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #1a1a1a;
+    overflow: hidden;
+}
+
+.serviceImageContainer {
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+    width: 14.28vw;
+    height: 65svh;
+}
+
+.serviceItem:hover {
+    .serviceImageContainer {
+        .serviceImage {
+            transform: translateX(0);
+        }
+    }
+
+    .serviceContent {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+    }
+}
+
+.serviceImage {
+    width: 14.28vw;
+    transition: 1s ease-out;
+    transform: translateX(15vw);
+    height: 65svh;
+    opacity: 0.8;
+}
+
+.serviceContent {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0;
+    width: 14.28vw;
+    transition: 1s;
+    height: 65svh;
+    padding: 0.5vw;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.serviceNum {
+    margin-bottom: 10svh;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.serviceName {
+    font-size: 1vw;
+    margin: 0;
+    font-weight: 500;
+}
+
+.serviceButton {
+    margin-top: 5svh;
+    background: #d9d9d9;
+    border-radius: 16px;
+    width: 8vw;
+    height: 3svh;
+    font-size: 0.8vw;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5vw;
+}
+
+@media (max-width:800px) {
+    .servicesContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .serviceItem {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 15svh;
+        transition: 1s;
+        align-items: center;
+    }
+
+    .serviceItem:active,.serviceItem:focus,.serviceItem:hover{
+        background: linear-gradient(90deg, #007cf8 0%, #1a1a1a 100%);
+        *{
+            color:white;
+        }
+        .serviceButton{
+            color:black;
+        }
+    }
+
+    .serviceImageContainer {
+        display: none;
+    }
+
+    .serviceNum{
+        color:#007CF8;
+        font-size:5vw;
+        font-weight: 200;
+    }
+
+    .serviceContent {
+        z-index: 10;
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        align-items: center;
+        width: 100vw;
+        align-self: center;
+        transition: 1s;
+        height: 15svh;
+        padding: 0;
+
+        * {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            z-index:11;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .serviceText {
+        height: 15svh;
+        justify-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        height: 15svh;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 0.5vw;
+        * {
+            font-size:3vw;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+    .serviceButton{
+        margin-right: 2vw;
+        width: 100%;
+        column-gap: 0.5vw;
+        padding: 0;
+        align-items: center;
+        flex-direction: row;
+        font-size: 2vw;
+        height: 4svh;
+    }
+}

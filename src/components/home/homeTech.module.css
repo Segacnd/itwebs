@@ -1,0 +1,111 @@
+@keyframes scrollFromRight {
+    0% {
+        left: 110%;
+    }
+
+    100% {
+        left: -10%;
+    }
+}
+
+@keyframes scrollFromRightMob {
+    0% {
+        left: 330%;
+    }
+    100% {
+        left: -30%;
+    }
+}
+
+.block {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    height: auto;
+    min-height: 20svh;
+    margin-bottom: 20svh;
+}
+
+.carousel {
+    width:auto;
+    align-items: center;
+    margin-top: 10svh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top:0;
+    max-height: 15svh;
+    height: auto;
+    z-index: 13;
+    max-width: 100vw;
+}
+
+.carousel:hover{
+
+    .carouselItem {
+    animation-play-state: paused;
+    opacity: 0.5;
+    }
+
+    .carouselItem:hover {
+    opacity: 1;
+    }
+}
+
+.carouselItem:hover {
+    scale: 1.5;
+    z-index: 13;
+}
+
+.carouselItem {
+    position: absolute;
+    overflow: hidden;
+    width: 8vw;
+    height: 8vw;
+    margin: 0;
+    background-color: white;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 12;
+    left: 110%;
+    transition: 0.7s;
+    animation-name: scrollFromRight;
+    animation-duration: 45s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@media (max-width: 900px) {
+    .carousel {
+        width: 100vw;
+        align-self: center;
+        max-width: 100vw;
+        box-sizing: border-box;
+        margin-inline: auto;
+        position: relative;
+        height: 30vw;
+        overflow: hidden;
+    }
+
+    .carouselItem {
+        margin: 0;
+        left: 100%;
+        animation-duration: 20s;
+        position: absolute;
+        z-index: 13;
+        animation-name: scrollFromRightMob;
+        width: 30vw;
+        height: 30vw;
+    * {
+        width: 20vw;
+        height: 20vw;
+    }
+}
+
+    .block {
+        margin-bottom: 0;
+    }
+}

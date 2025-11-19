@@ -1,0 +1,23 @@
+@keyframes fromLeft {
+    0%{
+        transform: translateX(-10vw);
+    }
+    100%{
+        transform: translateX(0vw);
+    }
+}
+
+.heading{
+    font-size: 1.2vw;
+    font-family: 'Nunito Sans', sans-serif;
+    transform: translateX(-10vw);
+    animation: fromLeft linear;
+    animation-timeline: view(-100px);
+}
+.headingContainer{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}

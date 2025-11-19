@@ -1,0 +1,211 @@
+.detailInfoComponent {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(50vw);
+    transition: all 2s;
+
+    * {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+.detailInfoContainer {
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: white;
+    padding: 3vh 2vw;
+    height: 94vh;
+    width: 46vw;
+}
+
+.itemComponent {
+    display: grid;
+    grid-template-columns: 3vw 20vw 20vw repeat(2, 15vw);
+    border-radius: 8px;
+    background-color: rgba(25,25,25,0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    padding: 1vw 2vw;
+    width: max-content;
+}
+
+.itemInfo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.itemButton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    button {
+        font-family: 'Nunito Sans', sans-serif;
+        display: flex;
+        height: 3vw;
+        padding: 1vw 2vw;
+        color: #fff;
+        background-color: #1a1a1a;
+        border-color: black;
+        border-radius: 21px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1vw;
+        transition: all 1s;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: black;
+    }
+}
+
+.detailManagerLine {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3vw;
+    font-weight: 500;
+
+    button {
+        padding: 0.4vw 2vw;
+        scale: 0.9;
+        font-size: 1.1vw;
+        cursor: pointer;
+        color: white;
+        border-radius: 12px;
+        box-shadow: 1px 1px 2px 0 black;
+        transition: all 1s;
+    }
+
+    button:hover {
+        box-shadow: 2px 2px 3px 0 gray;
+    }
+}
+
+.detailInfoStates {
+    margin-top: 3svh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3vw;
+    margin-bottom: 2svh;
+}
+
+.statePair {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5svh;
+    width: max-content;
+
+    label {
+        color: gray;
+    }
+}
+
+.statePairDiv {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statePairDivManager {
+    padding: 0.1vw 0.4vw;
+    border-radius: 21px;
+    font-weight: 300;
+    font-family: 'Gilroy', sans-serif;
+}
+
+.detailHeadingPair{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 2svw;
+    label{
+        width: 15svw;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    div{
+        color: gray;
+        padding: 0.1vw 2vw;
+        border: 0.3px solid gray;
+        border-radius: 12px;
+        height: 3svh;
+        display: flex;
+        align-items: center;
+        width: 15svw;
+    }
+}
+
+.detailRequestDataValue{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.2svh;
+    color: gray;
+}
+
+.detailRequestPair{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2svw;
+    label{
+        width: 20svw;
+    }
+}
+
+.detailPersonData{
+    display: flex;
+    margin: 3svh 0;
+    flex-direction: column;
+    width: max-content;
+    padding: 0.5svh 1svw;
+    border: 1px solid black;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    row-gap: 1.5svh;
+    border-radius: 21px;
+}
+.detailRequestData{
+    display: flex;
+    flex-direction: column;
+    margin: 2svh 0;
+    row-gap: 2svh;
+}
+
+.detailComment{
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    min-height: 15svh;
+    overflow: auto;
+    overflow-x: hidden;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}

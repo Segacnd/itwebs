@@ -1,0 +1,113 @@
+@keyframes logoTextInfinite {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.component {
+  width: 2.5vw;
+  height: 2.5vw;
+  padding: 1vw;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logoWeb {
+  width: 4vw;
+  height: 4vw;
+}
+.logoMobile {
+  display: none;
+}
+.linkComp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 1.5vw;
+
+  div {
+    background: linear-gradient(90deg, #fff, #ff19ff, #007cf8, #ffffff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logoTextInfinite 10s ease-in-out infinite;
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    top: -0.1vw;
+    left: -1.5vw;
+  }
+
+  span {
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 1vw;
+    top: 0.35vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .component {
+    width: max-content;
+    height: 8vw;
+    border-radius: 9px;
+
+    * {
+      font-size: 5vw;
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: max-content;
+
+    div {
+      background: linear-gradient(-75deg, #fff, #ff19ff, #007cf8, #ffffff);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: logoTextInfinite 10s ease infinite;
+      transform: translate3d(0, 0, 0);
+      top: -0.3vw;
+      font-family: "Bruno Ace", sans-serif;
+      font-weight: 400;
+      margin-left: 3px;
+      span {
+        position: absolute;
+      }
+    }
+
+    span {
+      top: 1vw;
+      left: -0.5vw;
+    }
+  }
+  .logoMobile {
+    position: relative;
+    display: flex;
+    scale: 3.5;
+  }
+  .logoWeb {
+    display: none;
+  }
+}

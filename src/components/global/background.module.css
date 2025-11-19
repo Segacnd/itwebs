@@ -1,0 +1,177 @@
+@keyframes slowColor {
+    0% {
+        color: #152e48;
+        stroke: #152e48;
+    }
+
+    20% {
+        color: #1a1a1a;
+        stroke: #1a1a1a;
+    }
+
+    70% {
+        stroke: gray;
+        color: gray;
+    }
+
+    100% {
+        color: #152e48;
+        stroke: #152e48;
+    }
+
+}
+
+@keyframes slowCircleColor {
+    0% {
+        color: #152e48;
+        stroke: #152e48;
+        fill: #152e48;
+    }
+
+    20% {
+        color: #007CF8;
+        stroke: #007CF8;
+        fill: #007CF8;
+    }
+
+    70% {
+        stroke: blue;
+        color: blue;
+        fill: blue;
+    }
+
+    100% {
+        color: #152e48;
+        stroke: #152e48;
+        fill: #152e48;
+    }
+}
+
+@keyframes lightning {
+    0% {
+        opacity: 0.2;
+        stroke: #152e48;
+    }
+
+    50% {
+        opacity: 0.8;
+        stroke: white;
+    }
+
+    100% {
+        opacity: 0.2;
+        stroke: #152e48
+    }
+}
+
+.bgContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #0c0c1d;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(40, 30, 80, 0.3) 0%, transparent 30%),
+        radial-gradient(circle at 90% 70%, rgba(60, 30, 100, 0.3) 0%, transparent 30%),
+        radial-gradient(circle at 50% 50%, rgba(30, 20, 70, 0.2) 0%, transparent 40%);
+    background-color: #101010;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 0.5px, transparent 0.5px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.5px, transparent 0.5px);
+    background-size: 240px 240px;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+
+    * {
+        -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE 10 and IE 11 */
+        user-select: none;
+    }
+}
+
+.circleSVG {
+    border-radius: 100%;
+    stroke-width: 1px;
+    stroke: #152e48;
+
+    path {
+        animation: slowColor 10s ease-in-out infinite;
+        stroke: #152e48;
+    }
+}
+
+.arrowSVG {
+    stroke: #007CF8;
+    filter: drop-shadow(0 0 12px 0 #007CF8);
+
+    path {
+        stroke: blue;
+        animation: lightning 5s ease-in-out infinite;
+        stroke-width: 5px;
+    }
+}
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20vw;
+    margin-top: 5%;
+    column-gap: 1vw;
+}
+
+.firstBox {
+    margin-top: -7%;
+    align-self: flex-end;
+    padding-right: 10vw;
+
+    circle {
+        animation: slowCircleColor 10s infinite ease;
+    }
+}
+
+.flyInput {
+    border-radius: 20px;
+    width: 210px;
+    height: 44px;
+    border: 2px solid #152e48;
+    margin-left: 20vw;
+    margin-top: 20svh;
+}
+
+.secondBox {
+    padding-left: 5vw;
+    margin-top: 35svh;
+
+    circle {
+        animation: slowCircleColor 10s infinite ease;
+    }
+}
+
+@media (max-width:800px) {
+    .arrows {
+        align-self: flex-start;
+        margin-top: 10svh;
+        margin-right: 20svw;
+
+    }
+
+    .flyInput {
+        margin-top: 0;
+        margin-left: 0;
+        align-self: flex-end;
+        width: 40vw;
+        height: 10vw
+    }
+
+    .secondBox {
+        padding-top: 0;
+        margin-top: 20svh;
+    }
+}

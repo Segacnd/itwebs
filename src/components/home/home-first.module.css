@@ -1,0 +1,122 @@
+@keyframes titleGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes webGradient {
+    0% {
+        transform: rotateZ(0);
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        transform: rotateZ(180);
+    }
+
+    100% {
+        background-position: 0% 50%;
+        transform: rotateZ(360);
+    }
+}
+
+.block {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 85svh;
+    height: auto;
+    max-height: 150svh;
+    align-items: center;
+    position: inherit;
+    justify-content: center;
+}
+
+.title {
+    margin: 0;
+    background: linear-gradient(-75deg, #fff, #FF19FF, #007CF8, #FFFFFF);
+    background-size: 400% 400%;
+    animation: titleGradient 10s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: 'Gilroy', sans-serif;
+    cursor: default;
+    font-weight: 700;
+    text-align: center;
+    z-index: 8;
+    font-size: 3.2vw;
+    height: max-content;
+    overflow: hidden;
+}
+
+.subtitle {
+    text-align: center;
+    overflow: hidden;
+    cursor: default;
+    margin: 0;
+    margin-top: 5svh;
+    overflow: hidden;
+    height: max-content;
+    margin-bottom: 15svh;
+    width: 48vw;
+    font-weight: 500;
+    color: white;
+    font-family: 'Gilroy', Courier, monospace;
+    font-size: 1.6vw;
+    letter-spacing: 0.05vw;
+}
+
+
+@media (max-width: 900px) {
+    .block {
+        min-height: auto;
+        height: max-content;
+        display: flex;
+        z-index: 90;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        width: 90vw;
+        padding: 0;
+        padding-top: 10svh;
+        margin: 0;
+        padding-left: 10vw;
+    }
+
+    .title {
+        font-weight: 700;
+        width: 80%;
+        letter-spacing: normal;
+        font-family: 'Gilroy', sans-serif;
+        text-align: start;
+        font-size: 6vw;
+        height: auto;
+    }
+
+    .subtitle {
+        text-align: start;
+        margin-top: 2svh;
+        font-family: 'Gilroy', sans-serif;
+        font-size: 4.5vw;
+        height: auto;
+        font-weight: 300;
+        width: 90%;
+        letter-spacing: normal;
+        margin-bottom: 25svh;
+
+        b {
+            font-weight: 800;
+        }
+    }
+
+}

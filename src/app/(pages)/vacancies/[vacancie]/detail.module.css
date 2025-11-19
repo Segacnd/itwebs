@@ -1,0 +1,515 @@
+@keyframes openModal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.detailPointContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5vw;
+
+    h3 {
+        margin: 1svh 0;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1.2vw;
+        font-weight: 300;
+    }
+}
+
+.detailPointCircle {
+    background-color: #007CF8;
+    border-radius: 50%;
+    width: 0.7vw;
+    height: 0.7vw;
+    box-shadow: 0 0 2px 0.1px #1a1a1a;
+    display: flex;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    background-color: #1a1a1a;
+    margin-top: 5svh;
+    padding-top: 2svh;
+    padding-bottom: 8svh;
+
+    h2 {
+        font-size: 1.5vw;
+        text-transform: uppercase;
+        margin-top: 3svh;
+    }
+
+    p {
+        font-size: 1.7vw;
+        text-transform: uppercase;
+    }
+}
+
+.head {
+    display: flex;
+    margin-top: 3svh;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 7vw;
+    column-gap: 2vw;
+    font-family: 'Nunito Sans', sans-serif;
+
+    * {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+.requestButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #007CF8;
+    width: 15vw;
+    align-self: flex-end;
+    color: white;
+    padding: 1vw 2vw;
+    cursor: pointer;
+    margin-top: 4svh;
+}
+
+.modalComponent {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainer {
+    background-color: #1a1a1a;
+    box-shadow: 0 0 3px 1px grey;
+    transition: 1s;
+    opacity: 0;
+    z-index: 99;
+    position: absolute;
+    min-width: 55vw;
+    scale: 0.9;
+    border-radius: 5px;
+    padding: 2vw 7vw;
+    padding-right: 4vw;
+}
+
+.modalHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5svh;
+}
+
+.modalInputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3svh;
+    padding-right: 10vw;
+}
+
+.modalNameLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2vw;
+
+    input {
+        width: 23vw;
+        transition: 1s;
+        cursor: pointer;
+        outline: none;
+        padding: 1vw 1vw;
+        background-color: #1a1a1a;
+        color: white;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1vw;
+        font-weight: 300;
+        border-radius: 12px;
+        border: 2px solid #007CF8;
+    }
+
+    input::placeholder {
+        color: gray;
+    }
+
+    input:focus {
+        box-shadow: 0 0 5px 1px gray;
+        color: white;
+    }
+}
+
+.modalLineInput {
+    transition: 1s;
+    cursor: pointer;
+    outline: none;
+    padding: 1vw 1vw;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    border-radius: 12px;
+    font-size: 1vw;
+    border: 2px solid #007CF8;
+}
+
+.modalLineInput:focus {
+    box-shadow: 0 0 5px 1px gray;
+    color: white;
+}
+
+.modalFileContainer {
+    width: 52vw;
+    border: 1px dotted #007CF8;
+    border-radius: 5px;
+    height: 20svh;
+    cursor: pointer;
+    position: relative;
+
+    input {
+        cursor: pointer;
+
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        opacity: 0;
+    }
+}
+
+.modalFileImage {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+
+    p {
+        font-size: 1vw;
+        user-select: none;
+        max-width: 25%;
+    }
+}
+
+.modalTextarea {
+    background-color: #1a1a1a;
+    border: 2px solid #007CF8;
+    border-radius: 6px;
+    height: 7svh;
+    color: white;
+    cursor: pointer;
+    font-size: 1VW;
+    resize: none;
+    transition: 1s;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 1vw;
+    outline: none;
+}
+
+.modalTextarea:focus {
+    box-shadow: 0 0 3px 1px gray;
+}
+
+.modalConfirmButton {
+    border-radius: 10px;
+    transition: 1s;
+    padding: 0.8vw 0;
+    background-color: #1a1a1a;
+    color: white;
+    border: 2px solid #007CF8;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1vw;
+}
+
+.modalConfirmButton:hover {
+    background-color: #007CF8;
+    cursor: pointer;
+}
+
+.modalCloseIcon {
+    cursor: pointer;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.modalFileIcon{
+    width: 4vw;
+    height: 4vw;
+}
+
+@media (max-width:800px) {
+    .detailPointContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2vw;
+
+        h3 {
+            margin: 1svh 0;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 3.3vw;
+            font-weight: 100;
+        }
+    }
+
+    .detailPointCircle {
+        background-color: #007CF8;
+        border-radius: 50%;
+        width: 2vw;
+        height: 2vw;
+        min-width: 2vw;
+        min-height: 2vw;
+        box-shadow: 0 0 2px 0.1px #1a1a1a;
+        display: flex;
+    }
+
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        background-color: #1a1a1a;
+        margin-top: 5svh;
+        padding-top: 2svh;
+        padding-bottom: 8svh;
+
+        h2 {
+            font-size: 4vw;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin: 3svh 0;
+            margin-bottom: 1vw;
+        }
+
+        p {
+            font-size: 1.7vw;
+            text-transform: uppercase;
+        }
+    }
+
+    .head {
+        display: flex;
+        margin-top: 3svh;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 7vw;
+        column-gap: 2vw;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 3vw;
+
+        * {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+    }
+
+    .requestButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a1a1a;
+        border: 1px solid #007CF8;
+        width: 40vw;
+        padding: 2vw;
+        align-self: flex-end;
+        color: white;
+        padding: 1vw 2vw;
+        cursor: pointer;
+        margin-top: 4svh;
+    }
+
+    .modalComponent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100svh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modalContainer {
+        position: absolute;
+        background-color: #1a1a1a;
+        box-shadow: 0 0 3px 1px grey;
+        transition: 1s;
+        opacity: 0;
+        min-width: 80vw;
+        scale: 0.9;
+        border-radius: 5px;
+        padding: 2vw 7vw;
+        padding-right: 4vw;
+        z-index: 99;
+    }
+
+    .modalHeading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5svh;
+    }
+
+    .modalInputs {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2svh;
+        padding-right: 10vw;
+    }
+
+    .modalNameLine {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        z-index: 98;
+        column-gap: 3vw; 
+
+        input {
+            width: 33vw;
+            transition: 1s;
+            cursor: pointer;
+            outline: none;
+            padding: 2vw;
+            background-color: #1a1a1a;
+            color: white;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 300;
+            font-size: 3.5vw;
+            font-weight: 100;
+            border-radius: 12px;
+            border: 2px solid #007CF8;
+        }
+
+        input::placeholder {
+            color: gray;
+        }
+
+        input:focus {
+            box-shadow: 0 0 5px 1px gray;
+            color: white;
+        }
+    }
+
+    .modalLineInput {
+        transition: 1s;
+        z-index: 98;
+        cursor: pointer;
+        outline: none;
+        padding: 2vw;
+        background-color: #1a1a1a;
+        color: white;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 100;
+        border-radius: 12px;
+        font-size: 3.5vw;
+        border: 2px solid #007CF8;
+    }
+
+    .modalLineInput:focus {
+        box-shadow: 0 0 5px 1px gray;
+        color: white;
+    }
+
+    .modalFileContainer {
+        width: 78vw;
+        border: 1px dotted #007CF8;
+        border-radius: 5px;
+        height: 20svh;
+        cursor: pointer;
+        position: relative;
+
+        input {
+            cursor: pointer;
+
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            opacity: 0;
+        }
+    }
+
+    .modalFileImage {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+        z-index: 8;
+
+        p {
+            font-size: 3vw;
+            font-weight: 100;
+            user-select: none;
+            max-width: 60%;
+
+        }
+    }
+
+    .modalTextarea {
+        background-color: #1a1a1a;
+        z-index: 98;
+        border: 2px solid #007CF8;
+        border-radius: 6px;
+        height: 7svh;
+        color: white;
+        cursor: pointer;
+        font-size: 3.5VW;
+        font-weight: 100;
+        resize: none;
+        transition: 1s;
+        font-family: 'Nunito Sans', sans-serif;
+        padding: 2vw;
+        outline: none;
+    }
+
+    .modalTextarea:focus {
+        box-shadow: 0 0 3px 1px gray;
+    }
+
+    .modalConfirmButton {
+        border-radius: 10px;
+        transition: 1s;
+        padding: 0.8vw 0;
+        background-color: #1a1a1a;
+        color: white;
+        border: 2px solid #007CF8;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 4vw;
+    }
+
+    .modalConfirmButton:hover {
+        background-color: #007CF8;
+        cursor: pointer;
+    }
+
+    .modalCloseIcon {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .modalFileIcon{
+        width: 12vw;
+        height: 12vw;
+    }
+}

@@ -1,0 +1,261 @@
+@keyframes articleFromBottom {
+    0% {
+        transform: translateY(10svh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes mobileFromLeft {
+    0%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(-10vw);
+    }
+}
+
+@keyframes mobileFromRight {
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(10vw);
+    }
+}
+
+@keyframes arrowLeft {
+    0%{
+        transform: translateX(-50vw);
+    }
+    80%{
+        transform: translateX(10vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes arrowRight {
+    0%{
+        transform: translateX(50vw);
+    }
+    80%{
+        transform: translateX(-10vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.block {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: 85svh;
+    padding-top: 15svh;
+}
+
+.articleContainer {
+    align-self: center;
+    height: 10svh;
+    overflow: hidden;
+}
+
+.article {
+    font-size: 2.1vw;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.advantagesContainer {
+    display: grid;
+    margin-top: 5svh;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    width: 80vw;
+    align-self: center;
+    column-gap: 2vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 65svh;
+}
+
+.leftAdvantages {
+    display: grid;
+    height: 65svh;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2vw;
+    width: 100%;
+
+    .advantageItem {
+        flex-direction: column;
+        padding: 2vw;
+        justify-content: space-between;
+    }
+}
+
+.advantageItem {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 21px;
+    display: flex;
+}
+
+.rightAdvantages {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    row-gap: 2vw;
+    height: 65svh;
+
+    .advantageItem {
+        display: flex;
+        padding: 5% 7%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.advantageMainText {
+    font-size: 3vw;
+    font-weight: 800;
+    letter-spacing: 0.1vw;
+    z-index: 10;
+}
+
+.advantageText {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    z-index: 10;
+}
+.advantageRightText{
+    width: 90%;
+    z-index: 10;
+    align-self: flex-end;
+    text-align: end;
+}
+.advantageNum{
+    display: flex;
+    z-index: 12;
+    position: relative;
+    width: max-content;
+    align-items: flex-start;
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+}
+.advantageRightNum{
+    display: flex;
+    z-index: 12;
+    position: relative;
+    width: max-content;
+    align-self: flex-end;
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+}
+
+@media (max-width: 900px) {
+    .block{
+        height:90svh;
+        overflow: hidden;
+        padding: 0;
+    }   
+    .article{
+        font-size: 5vw;
+        margin: 0;
+        font-weight: 700;
+    }
+    .advantagesContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0svh;
+        height: auto;
+        max-height: none;
+        row-gap: 5svh;
+        *{
+            overflow: hidden;
+        }
+    }
+    .leftAdvantage{
+        width: 85vw;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a1a1a;
+        border-radius: 16px;
+        height: 30svh;
+        display: flex;
+        color: white;
+        flex-direction: row-reverse;
+        padding-left: 10vw;
+        align-self: flex-start;
+        animation-play-state: paused;
+        .advantageText{
+            align-items: flex-start;
+            text-align: start;
+            padding-left: 5vw;
+        }
+        .advantageNum{
+            padding-right: 4vw;
+        }
+    }
+    .rightAdvantage{
+        width: 85vw;
+        padding-right: 10vw;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a1a1a;
+        border-radius: 16px;
+        height: 30svh;
+        display: flex;
+        color: white;
+        flex-direction: row;
+        align-self: flex-end;
+        animation-play-state: paused;
+        .advantageText{
+            align-items: flex-end;
+            text-align: end;
+            padding-right: 5vw;
+        }
+        .advantageNum{
+            padding-left: 4vw;
+            padding-right: 2vw;
+        }
+    }
+    .advantageNum{
+        font-size: 4vw;
+        align-self: flex-end;
+        padding-bottom: 4vw;
+        width: max-content;
+        font-family: 'Bruno Ace', sans-serif;
+    }
+    .advantageText{
+        font-size: 3vw;
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        width: 100%;
+        align-self: center;
+        justify-content: center;
+        align-items: flex-end;
+        font-family: 'Gilroy', sans-serif;
+        .advantageMainText{
+            font-size: 10vw;
+            height: fit-content;
+        }
+    }
+    .advantageSecText{
+        width:70vw;
+        font-size: 3.8vw;
+        height:fit-content;
+        overflow: hidden;
+        position: relative;
+    }
+}

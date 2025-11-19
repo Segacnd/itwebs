@@ -1,0 +1,144 @@
+@keyframes repeatSlide {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(10vw);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-10vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.container {
+    height: 67svh;
+    margin-top: 5svh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7svh;
+    margin-left: 0vw;
+}
+
+.container::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+.worksItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 50svh;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.workName{
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: 800;
+}
+
+.worksItem:hover {
+    .workImage {
+        transform: scale(1);
+        opacity: 1;
+        z-index: 9;
+    }
+}
+
+.workImagess {
+    width: 50vw;
+    height: 60svh;
+    opacity: 0.8;
+    position: relative;
+    z-index: 9;
+}
+
+@media (max-width: 900px) {
+    .block{
+        max-height: fit-content;
+    }
+    .container {
+        display: flex;
+        width: 90vw;
+        margin-top: 0;
+        padding-top: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-shrink: none;
+        height: 40svh;
+        column-gap: 20vw;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        margin-left: 3vw;
+        padding-left: 2vw;
+    }
+
+    .worksItem {
+        display: flex;
+        flex-direction: column-reverse;
+        grid-template-columns: none;
+        scroll-snap-align: center;
+        flex-shrink: none;
+        scroll-snap-stop: always;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0;
+        width: 85vw;
+        row-gap: 0;
+        max-width: 85vw;
+        height: 28svh;
+        background-color: #1a1a1a;
+        padding: 4vw;
+        border-radius: 21px;
+        margin-bottom: 0;
+
+        * {
+            width: 85vw;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            font-weight: 500;
+        }
+    }
+
+    .worksItem:hover{
+        scale: 1;
+        *{
+            transform: scale(1);
+        }
+    }
+
+    .workImagess {
+        border-radius: 21px;
+        width: 83vw;
+        margin-top: 1svh;
+        height: 20svh;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .workName{
+        margin: 0;
+        margin-top: 0;
+        font-size: 3.2vw;
+    }
+    .HomeWorkScrollElem{
+        transform: none;
+        animation: repeatSlide 1s ease-in-out infinite ;
+    }
+}

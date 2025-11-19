@@ -1,0 +1,146 @@
+.component {
+    display: flex;
+    padding: 1svh 1svw;
+    background-color: white;
+    color: black;
+    font-family: 'Gilroy', sans-serif;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 25vw;
+    width: 48svw;
+    border-radius: 21px;
+    height: 13svh;
+    z-index: 99;
+    font-size: 1.1vw;
+    transition: 1s;
+    transform: translateY(30svh);
+    bottom: 8svh;
+}
+
+.textContainer {
+    height: 13svh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading {
+    font-weight: 700;
+    font-size: 1.5vw;
+    display: flex;
+    column-gap: 1vw;
+    margin-bottom: 2svh;
+    align-items: center;
+}
+
+.buttonContainer {
+    width: 20%;
+    height: 13svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 7svw;
+        height: 4svh;
+        font-family: 'Gilroy', sans-serif;
+        font-size: 1vw;
+        border-radius: 8px;
+        color: black;
+        background-color: aliceblue;
+        transition: all 1s;
+        cursor: pointer;
+        scale: 1;
+    }
+
+    button:hover {
+        scale: 1.1;
+    }
+}
+
+.cookieIcon {
+    width: 2vw;
+    height: 2vw;
+}
+
+@media (max-width:800px) {
+    .component {
+        display: flex;
+        padding: 1svh 1svw;
+        background-color: white;
+        color: black;
+        font-family: 'Gilroy', sans-serif;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 5svw;
+        width: 90svw;
+        border-radius: 21px;
+        height: 10svh;
+        z-index: 99;
+        font-size: 1.1vw;
+        transition: 1s;
+        transform: translateY(30svh);
+        bottom: 4svh;
+    }
+
+    .textContainer {
+        height: 13svh;
+        width: 85%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        font-size: 3vw;
+    }
+
+    .heading {
+        font-weight: 500;
+        font-size: 4.5vw;
+        display: flex;
+        font-family: 'Nunito Sans', sans-serif;
+        column-gap: 1vw;
+        margin-top: 3svh;
+        margin-bottom: 1svh;
+        align-items: center;
+    }
+
+    .buttonContainer {
+        width: 20svw;
+        height: 13svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20svw;
+            height: 4svh;
+            font-family: 'Gilroy', sans-serif;
+            font-size: 3.5vw;
+            border-radius: 8px;
+            color: black;
+            background-color: aliceblue;
+            transition: all 1s;
+            cursor: pointer;
+            scale: 1;
+        }
+
+        button:hover {
+            scale: 1.1;
+        }
+    }
+
+    .cookieIcon {
+        width: 5vw;
+        height: 5vw;
+    }
+}
