@@ -12,8 +12,11 @@ const Custom404 = () => {
           <h2>Вернитесь на главную</h2>
           <div className={styles.buttonContainer}>
             <NotFoundButton />
-            <Link href={"/"} style={{ textDecoration: "none", color: "white" }}>
-              <button type="button" className={styles.buttonLink}>Вернуться домой →</button>
+            <Link
+              href={"/"}
+              className={styles.buttonLink}
+            >
+              Вернуться домой →
             </Link>
           </div>
         </div>

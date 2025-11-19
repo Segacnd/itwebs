@@ -2,7 +2,7 @@
 import * as motion from "motion/react-client";
 import React from "react";
 
-export default function ConsultButtonClient(props) {
+export default function ConsultButtonAnimated(props) {
   return (
     <motion.div
       initial={{ transform: "scale(0)" }}

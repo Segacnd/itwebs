@@ -1,17 +1,17 @@
+import { CONSALT_MODAL_ID } from "@/constants/modal-constants";
 import styles from "./consultButton.module.css";
-import ConsultButtonClient from "./ConsultButtonClient";
+import ConsultButtonAnimated from "./ConsultButtonAnimated";
 
 const ConsultButton = (props) => {
   return (
     <label
-      htmlFor="modal-consult" 
+      htmlFor={CONSALT_MODAL_ID}
       style={{
-        textAlign: "center",
         ...props.styles,
       }}
       className={styles.consultButton}
     >
-      <ConsultButtonClient props={props} />
+      <ConsultButtonAnimated props={props} />
     </label>
   );
 };

@@ -96,6 +96,7 @@
     animation: spinner 2s linear forwards;
     border-radius: 21px;
     font-weight: 300;
+    text-decoration: none;
 }
 .buttonLink:hover{
     background-color: gray;

@@ -2,20 +2,21 @@ import * as styles from "./globales.module.css";
 
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-import FormConsultModal from "./form/FormConsultModal";
+import ConsultModalForm from "./form/ConsultModalForm";
 import Loader from "./Loader";
+import { CONSALT_MODAL_ID } from "@/constants/modal-constants";
 
 const ConsultModal = ({ loading, setLoading, isOpen }) => {
   return (
     <>
       {loading && <Loader />}
       <div data-open={isOpen} className={styles.modalComponent}>
+        <label htmlFor={CONSALT_MODAL_ID} className={styles.modalOverlay}/>
         <div data-open={isOpen} className={styles.modalContainer}>
-          {/* закрывать по label */}
-          <label className={styles.modalCross} htmlFor="modal-consult">
+          <label className={styles.modalCross} htmlFor={CONSALT_MODAL_ID}>
             <Icon icon="line-md:close" width="2vw" color="white" height="2vw" />
           </label>
-          <FormConsultModal setLoading={setLoading} />
+          <ConsultModalForm setLoading={setLoading} />
         </div>
       </div>
     </>

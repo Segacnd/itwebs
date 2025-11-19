@@ -14,7 +14,7 @@ const ServicePaymentType = ({ num, name, stages, desc, advantage }) => {
                 <h4 className={styles.paymentItemDesc}>{desc}</h4>
                 <div className={styles.paymentItemStages}>
                     {stages.map(item => (
-                        <div className={styles.paymentItemStage}>
+                        <div key={item} className={styles.paymentItemStage}>
                             <div>
                                 <div className={byzTypeStyles.columnCircle}>
                                 </div>

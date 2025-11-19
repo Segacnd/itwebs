@@ -51,7 +51,7 @@ const Footer = () => {
                 }
               >
                 {item.title}
-                {item.id === "menu" && (
+                {item.id !== "menu" && (
                   <div className={styles.linkUnderline}></div>
                 )}
               </Link>

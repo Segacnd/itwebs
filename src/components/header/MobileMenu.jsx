@@ -8,20 +8,10 @@ const MobileMenu = () => {
   return (
     <div className={styles.mobileMenuComponent}>
       <div className={styles.mobileMenuInner}>
-        <label
-          htmlFor="menuToggle"
-          className={styles.mobileMenuCloseButton}
-        >
+        <label htmlFor="menuToggle" className={styles.mobileMenuCloseButton}>
           <Icon
-            style={{
-              alignSelf: "flex-end",
-              zIndex: 99,
-              position: "absolute",
-              width: "7vw",
-              height: "7vw",
-            }}
+            className={styles.mobileMenuCloseButtonIcon}
             icon="line-md:close"
-            color="gray"
           />
         </label>
         <div className={styles.mobileMenuLinkss}>

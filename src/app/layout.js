@@ -24,7 +24,7 @@ import SecBackground from "@/components/global/SecBackground";
 // import StoreProvider from "./StoreProvider";
 import Script from "next/script";
 
-import WrapperConsultModal from "@/components/global/WrapperConsultModal";
+import ConsultModalWrapper from "@/components/global/ConsultModalWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -250,7 +250,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ToastContainer />
           <Header />
           <CookieComponent />
-          <WrapperConsultModal />
+          <ConsultModalWrapper />
           {children}
         </body>
       </html>

@@ -63,14 +63,17 @@
   pointer-events: auto;
   background-color: rgba(0, 0, 0, 0.2);
 }
+.modalOverlay {
+  position: absolute;
+  inset: 0;
+}
 .modalContainer[data-open="true"] {
   opacity: 1;
   transform: scale(1);
 }
 .modalComponent {
   position: fixed;
-  left: 0;
-  top: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -81,7 +84,7 @@
 
   opacity: 0;
   pointer-events: none;
-  background-color: rgba(0, 0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0);
   transition: opacity 0.5s ease, background-color 0.5s ease;
 }
 

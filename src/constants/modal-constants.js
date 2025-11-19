@@ -1,0 +1,1 @@
+export const CONSALT_MODAL_ID='consult-modal'
