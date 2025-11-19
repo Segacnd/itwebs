@@ -74,7 +74,10 @@
         margin: 0;
     }
 }
-
+.buttonContainer{
+    display: flex;
+    gap: 10px;
+}
 .buttonLink{
     transform: rotateZ(0);
     margin-top: 10svh;

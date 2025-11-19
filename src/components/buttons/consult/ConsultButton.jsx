@@ -1,8 +1,6 @@
 import styles from "./consultButton.module.css";
 import ConsultButtonClient from "./ConsultButtonClient";
 
-// TODO:label  связать его с модалкой бургером
-
 const ConsultButton = (props) => {
   return (
     <label
