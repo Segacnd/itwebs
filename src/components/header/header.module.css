@@ -21,8 +21,8 @@
 
 .burgerImg,
 .closeImg {
-  width: 7vw;
-  height: 7vw;
+  width: 5vw;
+  height: 5vw;
   transition: 0.3s;
 }
 
@@ -49,7 +49,7 @@
   transition: 1s;
   margin: 0;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
 .container {
