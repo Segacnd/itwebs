@@ -11,12 +11,20 @@ const ConsultModal = ({ loading, setLoading, isOpen }) => {
     <>
       {loading && <Loader />}
       <div data-open={isOpen} className={styles.modalComponent}>
-        <label htmlFor={CONSALT_MODAL_ID} className={styles.modalOverlay}/>
+        <label htmlFor={CONSALT_MODAL_ID} className={styles.modalOverlay} />
         <div data-open={isOpen} className={styles.modalContainer}>
-          <label className={styles.modalCross} htmlFor={CONSALT_MODAL_ID}>
-            <Icon icon="line-md:close" width="2vw" color="white" height="2vw" />
-          </label>
-          <ConsultModalForm setLoading={setLoading} />
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <span style={{ fontSize: "4em", whiteSpace: 'nowrap'}}>Заявка на консультацию</span>
+            <label className={styles.modalCross} htmlFor={CONSALT_MODAL_ID}>
+              <Icon
+                icon="line-md:close"
+                width="2vw"
+                color="white"
+                height="2vw"
+              />
+            </label>
+          </div>
+          <ConsultModalForm setLoading={setLoading} isOpen={isOpen}/>
         </div>
       </div>
     </>

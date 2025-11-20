@@ -6,58 +6,46 @@ import { sendConsultRequest } from "@/services/sendConsultRequest.service";
 import { useForm } from "react-hook-form";
 import Input from "./Input";
 import Textarea from "./Textarea";
+import { consultFormschema, defaultValues } from "./consult-form-config";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
+import Checkbox from "./Checkbox";
 
-export default function ConsultModalForm({ setLoading }) {
+export default function ConsultModalForm({ setLoading, isOpen }) {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      comment: "",
-      allow: false,
-    },
+    defaultValues,
+    resolver: zodResolver(consultFormschema),
   });
 
-  const onSubmit = (data) => {
-    if (!data.allow) {
-      return toast.error(
-        "Вы не приняли соглашение на обработку персональных данных"
-      );
-    }
+  const onSubmit = async (data) => {
     setLoading(true);
-    sendConsultRequest({ ...data, group: "consult" })
-      .then((res) => {
-        toast.success(res);
-        reset();
-      })
-      .catch((err) => toast.error(err?.message))
-      .finally(() => setLoading(false));
+    try {
+      await sendConsultRequest({ ...data, group: "consult" });
+      toast.success("Заявка успешно отправлена!");
+      reset();
+    } catch (err) {
+      toast.error(err?.message);
+    } finally {
+      setLoading(false);
+    }
   };
+
+  useEffect(() => {
+    if (!isOpen) reset();
+  }, [isOpen, reset]);
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.modalItems}>
-      <h2>Заявка на консультацию</h2>
-      <Input
-        name="name"
-        register={register}
-        isRequired
-        label="Имя"
-        errors={errors.name}
-      />
+      <Input name="name" register={register} label="Имя" errors={errors.name} isSubmitting={isSubmitting}/>
       <Input
         name="email"
         register={register}
-        isRequired
         label="Электронная почта"
         errors={errors.email}
-        pattern={{
-          value: /[_a-z-0-9]{5,}\@[a-z]{2,}\.[a-z]{1,}/i,
-          message: "Почта заполнена неверно, укажите действующий адрес",
-        }}
       />
       <Input
         name="phone"
@@ -68,20 +56,14 @@ export default function ConsultModalForm({ setLoading }) {
           const digitsOnly = e.target.value.replace(/\D/g, "");
           e.target.value = digitsOnly;
         }}
+        isSubmitting={isSubmitting}
       />
-      <Textarea label="Ваше сообщение" name="comment" register={register} />
+      <Textarea label="Ваше сообщение" name="comment" register={register} errors={errors.comment} isSubmitting={isSubmitting}/>
+      <Checkbox name="allow" register={register} errors={errors.allow} isSubmitting={isSubmitting}/>
 
-      <div className={styles.policyBlock}>
-        <div className={styles.policyInputContainer}>
-          <input {...register("allow", { required: true })} type="checkbox" />
-        </div>
-        {errors.allow && (
-          <div className={styles.policyText}>
-            Даю согласие на обработку моих персональных данных
-          </div>
-        )}
-      </div>
-      <button type="submit">Отправить</button>
+      <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? "Отправляется" : "Отправить"}
+      </button>
     </form>
   );
 }

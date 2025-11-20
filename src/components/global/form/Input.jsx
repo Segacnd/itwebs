@@ -1,30 +1,22 @@
 import * as styles from "../globales.module.css";
 
-export default function Input({
-  label,
-  name,
-  isRequired = false,
-  errors,
-  register,
-  onChange,
-  pattern = false,
-}) {
+export default function Input({ label, name, errors, register, onChange}) {
   return (
-    <div className={styles.inputPair}>
-      <label>{label}</label>
+    <div className={styles.inputPair} style={{ position: "relative" }}>
+      <label htmlFor={name}>{label}</label>
       <input
+        id={name}
         {...register(name, {
-          ...(isRequired && { required: "Обязательно к заполнению!" }),
-          ...(pattern && { pattern }),
           ...(onChange && { onChange }),
         })}
         style={{
-          color: errors ? "red" : "",
           border: errors ? "1px solid red" : "",
         }}
         type="text"
-        placeholder={isRequired ? "Обязательно к заполнению": ''}
       />
+      <p className={styles.errorInputComponent}>
+        {errors ? errors.message : ""}
+      </p>
     </div>
   );
 }
