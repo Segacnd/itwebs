@@ -3,16 +3,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./home-first.module.css";
 import ConsultButton from "../buttons/consult/ConsultButton";
-import { useSelector } from "react-redux";
-import { useAppSelector, useAppStore } from "../../store/hooks";
-import { Icon } from "@iconify/react/dist/iconify.js";
 import * as motion from "motion/react-client";
 
 const HomeFirstBlock = () => {
-  const [wind, setWind] = useState(null);
-  useEffect(() => {
-    setWind(window);
-  }, []);
   return (
     <div className={styles.block}>
       <motion.h1
@@ -38,12 +31,7 @@ const HomeFirstBlock = () => {
       </motion.h2>
 
       <ConsultButton
-        styles={{
-          transform:
-            wind && wind.innerWidth <= 900
-              ? "translateX(-5vw) translateY(-10svh)"
-              : "",
-        }}
+        className={styles.consultButtonHomeFirstBlock}
       />
     </div>
   );

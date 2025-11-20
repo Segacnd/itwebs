@@ -9,7 +9,7 @@ const ConsultButton = (props) => {
       style={{
         ...props.styles,
       }}
-      className={styles.consultButton}
+      className={`${styles.consultButton} ${props.className}`}
     >
       <ConsultButtonAnimated props={props} />
     </label>
