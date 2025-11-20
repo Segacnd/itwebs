@@ -65,11 +65,16 @@
     position: relative;
     z-index: 9;
 }
-
+.workItemMobileButton{
+    display: none;
+}
 @media (max-width: 900px) {
     .block{
         max-height: fit-content;
     }
+.workItemMobileButton{
+    display: block;
+}
     .container {
         display: flex;
         width: 90vw;

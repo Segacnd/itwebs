@@ -1,0 +1,10 @@
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.modalTitle {
+  font-size: 2vw;
+  white-space: nowrap;
+} 

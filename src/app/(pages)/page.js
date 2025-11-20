@@ -13,9 +13,10 @@ import { useSelector } from "react-redux";
 import HomeSecWorks from "../../components/home/HomeSecWorks";
 import QuizContainer from "@/components/quiz/QuizContainer";
 import QuizBanner from "@/components/quiz/QuizBanner";
-import StagesModern from "@/components/global/StagesModern";
+
 import HomeSecServices from "@/components/home/HomeSecServices";
 import PageSeoBlock from "@/components/global/seoBlock/PageSeoBlock";
+import StagesModern from "@/components/global/stage-modern/StagesModern";
 // import HomeTestBlock from "@/components/home/HomeTestBlock";
 
 
