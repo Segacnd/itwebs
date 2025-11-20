@@ -1,5 +1,5 @@
 import * as styles from "./globales.module.css";
-
+import * as modalStyles from './consult-modal.module.css'
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 import ConsultModalForm from "./form/ConsultModalForm";
@@ -13,8 +13,8 @@ const ConsultModal = ({ loading, setLoading, isOpen }) => {
       <div data-open={isOpen} className={styles.modalComponent}>
         <label htmlFor={CONSALT_MODAL_ID} className={styles.modalOverlay} />
         <div data-open={isOpen} className={styles.modalContainer}>
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-            <span style={{ fontSize: "4em", whiteSpace: 'nowrap'}}>Заявка на консультацию</span>
+          <div className={modalStyles.modalHeader}>
+            <div className={modalStyles.modalTitle}>Заявка на консультацию</div>
             <label className={styles.modalCross} htmlFor={CONSALT_MODAL_ID}>
               <Icon
                 icon="line-md:close"

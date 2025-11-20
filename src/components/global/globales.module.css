@@ -359,16 +359,23 @@
 
 .stageLineContainer {
   display: flex;
+  margin-top: -5vh;
   overflow: hidden;
   flex-direction: column;
   justify-content: flex-end;
 }
 
 .stageLine {
+  width: 80vw;
+  display: block;
   padding-top: 7vh;
   align-self: end;
 }
-
+.stageLineMobile {
+  display: none;
+  padding-top: 7vh;
+  align-self: end;
+}
 .policyBlock {
   display: flex;
   flex-direction: row;
@@ -395,7 +402,23 @@
   font-size: 1.1vw;
   margin: 0;
 }
-
+@media (max-width: 800px) {
+  .stageItem {
+    margin-bottom: 4svh;
+  }
+  .stageItemTextContent {
+    margin-right: 1vw;
+  }
+  .stageLine {
+    display: none;
+    width: 0;
+    transform: scaleX(1.7);
+  }
+  .stageLineMobile {
+    display: block;
+    transform: scaleX(1.7);
+  }
+}
 @media (max-width: 900px) {
   .upButton {
     width: 15vw;
@@ -554,6 +577,7 @@
       overflow: unset;
       height: 100%;
       z-index: 50;
+      margin-top: 0;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
@@ -618,4 +642,3 @@
   left: 0.5vw;
   font-size: 1em;
 }
-
