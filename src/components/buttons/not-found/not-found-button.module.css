@@ -1,0 +1,23 @@
+
+.buttonLink{
+    transform: rotateZ(0);
+    margin-top: 10svh;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    background-color: rgba(0,0,160,0.5);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    transition: 1s;
+    width: 15vw;
+    height: 10svh;
+    cursor: pointer;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2vw;
+    transition: 1s;
+    animation: spinner 2s linear forwards;
+    border-radius: 21px;
+    font-weight: 300;
+}
+.buttonLink:hover{
+    background-color: gray;
+}

@@ -1,597 +1,621 @@
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    50% {
-        transform: rotateZ(180deg);
-    }
+  50% {
+    transform: rotateZ(180deg);
+  }
 
-    100% {
-        transform: rotateZ(360deg);
-    }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 
 @keyframes from0 {
-    0% {
-        scale: 0%;
-        opacity: 0;
-    }
+  0% {
+    scale: 0%;
+    opacity: 0;
+  }
 
-    100% {
-        scale: 1;
-        opacity: 1;
-    }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
 }
 
 @keyframes to0 {
-    0% {
-        scale: 1;
-        opacity: 1;
-    }
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
 
-    100% {
-        scale: 0;
-        opacity: 0;
-    }
+  100% {
+    scale: 0;
+    opacity: 0;
+  }
 }
 
 .loaderComponent {
-    z-index: 80;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    animation: from0 1s;
+  z-index: 80;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation: from0 1s;
 }
 
 .loader {
-    border: 20px dotted white;
-    width: 10vw;
-    height: 10vw;
-    border-radius: 50%;
-    animation: spin 5s infinite ease-in-out;
+  border: 20px dotted white;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  animation: spin 5s infinite ease-in-out;
 }
-
+.modalComponent[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modalOverlay {
+  position: absolute;
+  inset: 0;
+}
+.modalContainer[data-open="true"] {
+  opacity: 1;
+  transform: scale(1);
+}
 .modalComponent {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    z-index: 99;
-    transition: 1s;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  transition: 1s;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: opacity 0.5s ease, background-color 0.5s ease;
 }
 
 .modalContainer {
-    width: 45vw;
-    padding: 2vh;
-    opacity: 0;
-    scale: 0;
-    transition: 1s;
-    height: max-content;
-    padding-bottom: 5svh;
-    display: flex;
-    flex-direction: column;
-    background-color: #1a1a1a;
-    border-radius: 21px;
+  width: 45vw;
+  padding: 2vh;
+
+  height: max-content;
+  padding-bottom: 5svh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  border-radius: 21px;
+
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .modalCross {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
 
-    * {
-        cursor: pointer;
-    }
+  * {
+    cursor: pointer;
+  }
 }
 
 .modalItems {
-    width: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3vh;
+  margin-left: 1vw;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  * {
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  button {
+    margin-top: 2vh;
     display: flex;
-    flex-direction: column;
-    row-gap: 3vh;
-    margin-left: 1vw;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    height: 6vh;
+    border-radius: 21px;
+    background: none;
+    font-size: 1.3vw;
+    padding: 1vh 0;
+    color: white;
+    transition: 0.7s;
+    cursor: pointer;
+    border: 1px solid #007cf8;
+  }
 
-    h2 {
-        margin-top: 0;
-    }
-
-    * {
-        font-family: 'Nunito Sans', sans-serif;
-    }
-
-    button {
-        margin-top: 2vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Nunito Sans', sans-serif;
-        height: 6vh;
-        border-radius: 21px;
-        background: none;
-        font-size: 1.3vw;
-        padding: 1vh 0;
-        color: white;
-        transition: 0.7s;
-        cursor: pointer;
-        border: 1px solid #007cf8;
-    }
-
-    button:hover {
-        background-color: #007cf8;
-        color: #1a1a1a;
-    }
+  button:hover {
+    background-color: #007cf8;
+    color: #1a1a1a;
+  }
 }
 
 .inputPair {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    row-gap: 1vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 1vh;
 
-    * {
-        transition: 0.7s;
-    }
+  * {
+    transition: 0.7s;
+  }
 
-    label {
-        font-size: 1.3vw;
-        letter-spacing: 0.08vw;
-    }
+  label {
+    font-size: 1.2vw;
+    letter-spacing: 0.08vw;
+  }
 
-    input {
-        border: 1px solid #007cf8;
-        border-radius: 20px;
-        background: none;
-        height: 4vh;
-        padding: 1vh 1vw;
-        color: white;
-        font-size: 1.4vw;
-        font-weight: 300;
-        outline: none;
-    }
+  input {
+    border: 1px solid #007cf8;
+    border-radius: 20px;
+    background: none;
+    height: 3.5vh;
+    padding: 1vh 1vw;
+    color: white;
+    font-size: 1.4vw;
+    font-weight: 300;
+    outline: none;
+  }
 
-    textarea {
-        border: 1px solid #007cf8;
-        border-radius: 20px;
-        background: none;
-        height: 10vh;
-        resize: none;
-        overflow: hidden;
-        font-size: 1.2vw;
-        font-weight: 300;
-        padding: 1vh 1vw;
-        color: white;
-        outline: none;
-    }
+  textarea {
+    border: 1px solid #007cf8;
+    border-radius: 20px;
+    background: none;
+    height: 9vh;
+    resize: none;
+    overflow: hidden;
+    font-size: 1.2vw;
+    font-weight: 300;
+    padding: 1vh 1vw;
+    color: white;
+    outline: none;
+  }
 }
 
 @keyframes from0to8 {
-    0% {
-        opacity: 0;
-        scale: 0;
-    }
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
 
-    100% {
-        opacity: 1;
-        scale: 0.8;
-    }
+  100% {
+    opacity: 1;
+    scale: 0.8;
+  }
 }
 
 .upButton {
-    position: fixed;
-    z-index: 50;
-    animation: from0to8 1s ease-out forwards;
-    bottom: 2vw;
-    width: 5vw;
-    scale: 0;
-    height: 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 2vw;
-    cursor: pointer;
-    background-color: #1a1a1a;
-    border-radius: 50%;
-    transition: 0.7s;
+  position: fixed;
+  z-index: 50;
+  animation: from0to8 1s ease-out forwards;
+  bottom: 2vw;
+  width: 5vw;
+  scale: 0;
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 2vw;
+  cursor: pointer;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  transition: 0.7s;
 }
 
 .upButton:hover {
-    box-shadow: 0 0 25px 2px black;
+  box-shadow: 0 0 25px 2px black;
 }
 
 .pageHeading {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    height: fit-content;
-    align-items: center;
-    margin-top: 5vh;
-    column-gap: 2vw;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: fit-content;
+  align-items: center;
+  margin-top: 5vh;
+  column-gap: 2vw;
 
-    div {
-        font-weight: 700;
-        font-size: 1.5vw;
-        font-family: 'Nunito Sans', sans-serif;
-        margin: 0;
-    }
+  div {
+    font-weight: 700;
+    font-size: 1.5vw;
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+  }
 }
 
 .mobileTechComponent {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: max-content;
-    margin-bottom: 5vh;
-    row-gap: 2vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  margin-bottom: 5vh;
+  row-gap: 2vh;
 }
 
 .mobileTechLine {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    column-gap: 2vw;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  column-gap: 2vw;
+  justify-content: center;
 }
 
 .mobileTechItem {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    border: none;
-    width: 9vw;
-    height: 9vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border: none;
+  width: 9vw;
+  height: 9vw;
 }
 
 .mobileTechIcon {
-    width: 6vw;
-    height: 6vw;
-    color: black;
+  width: 6vw;
+  height: 6vw;
+  color: black;
 }
 
 .mobileBack {
-    position: absolute;
-    display: none;
-    left: 0;
-    background: none;
-    top: 0;
-    width: 100vw;
-    height: auto;
-    margin-top: 0;
+  position: absolute;
+  display: none;
+  left: 0;
+  background: none;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  margin-top: 0;
 
-    svg {
-        padding-top: 0;
-        width: 100vw;
-        position: absolute;
-        left: 0;
-        top: 0;
-        margin-top: 0;
-    }
+  svg {
+    padding-top: 0;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+  }
 }
 
 .stagesBlock {
+  display: flex;
+  margin-top: 10vh;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 7vw;
+  width: 88vw;
+  max-height: max-content;
+  height: max-content;
+  overflow: hidden;
+}
+
+.stagesItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  column-gap: 3vw;
+  width: 88vw;
+  overflow: hidden;
+}
+
+.stagesNum {
+  font-weight: 400;
+  font-size: 8vw;
+  text-align: start;
+  background: linear-gradient(360deg, #000 0%, #8d8d8d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stageItemContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stageItemText {
+  max-width: 40vw;
+  font-weight: 400;
+  font-size: 1.3vw;
+}
+
+.stageItemTextContent {
+  margin-left: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1vh;
+}
+
+.stageItemHead {
+  font-weight: 700;
+  font-size: 2vw;
+}
+
+.stageLineContainer {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.stageLine {
+  padding-top: 7vh;
+  align-self: end;
+}
+
+.policyBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1vw;
+  column-gap: 1vw;
+
+  input {
+    transition: all 1s;
+    margin: 0;
+    width: 2vw;
+    height: 2vw;
+  }
+}
+
+.policyInputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.policyText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1vw;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .upButton {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .modalComponent {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    margin-top: 10vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+
+  .modalContainer {
+    width: 90vw;
+    height: max-content;
+    padding: 2svh;
+    margin-top: 5svh;
+    position: fixed;
+    opacity: 1;
+    scale: 1;
+    padding-bottom: 5svh;
+    z-index: 99;
+
+    * {
+      font-size: 5vw;
+    }
+  }
+
+  .modalCross {
+    * {
+      width: 5vw;
+      height: 5vw;
+    }
+  }
+
+  .modalItems {
+    width: 95%;
+    row-gap: 2svh;
+
+    button {
+      font-size: 3vw;
+      width: 50%;
+      align-self: center;
+      border-radius: 32px;
+      margin-bottom: 0;
+    }
+  }
+
+  .inputPair {
+    * {
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    label {
+      font-size: 3.5vw;
+      margin-left: 3vw;
+      margin-bottom: 1vw;
+    }
+
+    input {
+      font-size: 3vw;
+      border-radius: 32px;
+      padding: 2vw 5vw;
+    }
+
+    textarea {
+      font-size: 3.2vw;
+      padding: 3vw 4vw;
+    }
+  }
+
+  .pageHeading {
+    margin-top: 5svh;
+
+    .pghdI {
+      width: 5vw;
+      height: 5vw;
+    }
+
+    div {
+      font-size: 5vw;
+      margin-top: 0;
+    }
+  }
+
+  .mobileBack {
+    display: block;
+  }
+
+  .stagesBlock {
+    display: flex;
+    margin-top: 0;
     flex-direction: column;
     padding-left: 5vw;
     padding-right: 7vw;
     width: 88vw;
-    max-height: max-content;
-    height: max-content;
-    overflow: hidden;
-}
+  }
 
-.stagesItem {
+  .stagesItem {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    column-gap: 3vw;
-    width: 88vw;
-    overflow: hidden;
+    column-gap: 5vw;
+    width: 90vw;
+    margin-bottom: 0;
+    margin: 1svh 0;
+    overflow: visible;
+    position: relative;
+  }
 
-}
-
-.stagesNum {
+  .stagesNum {
     font-weight: 400;
-    font-size: 8vw;
-    text-align: start;
+    font-size: 20vw;
+    text-align: center;
     background: linear-gradient(360deg, #000 0%, #8d8d8d 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+  }
 
-.stageItemContent {
+  .stageItemContent {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+  }
 
-.stageItemText {
-    max-width: 40vw;
-    font-weight: 400;
-    font-size: 1.3vw;
-}
+  .stageItemText {
+    max-width: 65vw;
+    font-weight: 500;
+    font-size: 3vw;
+  }
 
-.stageItemTextContent {
+  .stageItemTextContent {
     margin-left: 1vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 1vh;
-}
+    row-gap: 1svh;
+  }
 
-.stageItemHead {
+  .stageItemHead {
     font-weight: 700;
-    font-size: 2vw;
-}
+    font-size: 5vw;
+  }
 
-.stageLineContainer {
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.stageLine {
-    padding-top: 7vh;
-    align-self: end;
-}
-
-.policyBlock {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 1vw;
-    column-gap: 1vw;
-
-    input {
-        transition: all 1s;
-        margin: 0;
-        width: 2vw;
-        height: 2vw;
-    }
-}
-
-.policyInputContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.policyText {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.22vw;
-    margin: 0;
-}
-
-@media (max-width: 900px) {
-    .upButton {
-        width: 15vw;
-        height: 15vw;
-    }
-
-    .modalComponent {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 99;
-    }
-
-    .modalContainer {
-        width: 90vw;
-        height: max-content;
-        padding: 2svh;
-        margin-top: 5svh;
-        position: fixed;
-        opacity: 1;
-        scale: 1;
-        padding-bottom: 5svh;
-        z-index: 99;
-
-        * {
-            font-size: 5vw;
-        }
-    }
-
-    .modalCross {
-        * {
-            width: 5vw;
-            height: 5vw;
-        }
-    }
-
-    .modalItems {
-        width: 95%;
-        row-gap: 2svh;
-
-        button {
-            font-size: 3vw;
-            width: 50%;
-            align-self: center;
-            border-radius: 32px;
-            margin-bottom: 0;
-        }
-    }
-
-    .inputPair {
-        * {
-            font-family: 'Nunito Sans', sans-serif;
-        }
-
-        label {
-            font-size: 3.5vw;
-            margin-left: 3vw;
-            margin-bottom: 1vw;
-        }
-
-        input {
-            font-size: 3vw;
-            border-radius: 32px;
-            padding: 2vw 5vw;
-        }
-
-        textarea {
-            font-size: 3.2vw;
-            padding: 3vw 4vw;
-        }
-    }
-
-    .pageHeading {
-        margin-top: 5svh;
-
-        .pghdI {
-            width: 5vw;
-            height: 5vw;
-        }
-
-        div {
-            font-size: 5vw;
-            margin-top: 0;
-        }
-    }
-
-    .mobileBack {
-        display: block;
-    }
-
-    .stagesBlock {
-        display: flex;
-        margin-top: 0;
-        flex-direction: column;
-        padding-left: 5vw;
-        padding-right: 7vw;
-        width: 88vw;
-    }
-
-    .stagesItem {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        column-gap: 5vw;
-        width: 90vw;
-        margin-bottom: 0;
-        margin: 1svh 0;
-        overflow: visible;
-        position: relative;
-    }
-
-    .stagesNum {
-        font-weight: 400;
-        font-size: 20vw;
-        text-align: center;
-        background: linear-gradient(360deg, #000 0%, #8d8d8d 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .stageItemContent {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .stageItemText {
-        max-width: 65vw;
-        font-weight: 500;
-        font-size: 3vw;
-    }
-
-    .stageItemTextContent {
-        margin-left: 1vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        row-gap: 1svh;
-    }
-
-    .stageItemHead {
-        font-weight: 700;
-        font-size: 5vw;
-    }
-
-    .stagesItem {
-        .stageLineContainer {
-            position: relative;
-            display: flex;
-            overflow: unset;
-            height: 100%;
-            z-index: 50;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            align-self: flex-end;
-            width: 20vw;
-            height: 20vw;
-        }
-
-        .stageLine {
-            padding-top: 0svh;
-            position: absolute;
-            align-self: center;
-            justify-self: center;
-            z-index: 55;
-        }
-    }
-
+  .stagesItem {
     .stageLineContainer {
-        display: flex;
-        overflow: visible;
-        flex-direction: column;
-        justify-content: flex-end;
+      position: relative;
+      display: flex;
+      overflow: unset;
+      height: 100%;
+      z-index: 50;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      align-self: flex-end;
+      width: 20vw;
+      height: 20vw;
     }
 
     .stageLine {
-        padding-top: 0;
-        align-self: end;
+      padding-top: 0svh;
+      position: absolute;
+      align-self: center;
+      justify-self: center;
+      z-index: 55;
     }
+  }
 
-    .policyBlock {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-left: 3vw;
-        column-gap: 3vw;
+  .stageLineContainer {
+    display: flex;
+    overflow: visible;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 
-        input {
-            transition: all 1s;
-            margin: 0;
-            width: 5vw;
-            height: 5vw;
-        }
+  .stageLine {
+    padding-top: 0;
+    align-self: end;
+  }
+
+  .policyBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3vw;
+    column-gap: 3vw;
+
+    input {
+      transition: all 1s;
+      margin: 0;
+      width: 5vw;
+      height: 5vw;
     }
+  }
 
-    .policyInputContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 10svw;
-    }
+  .policyInputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10svw;
+  }
 
-    .policyText {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 3.5vw;
-        margin: 0;
-    }
+  .policyText {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5vw;
+    margin: 0;
+  }
 }
+.errorInputComponent {
+  color: red;
+  position: absolute;
+  bottom: -1.6vw;
+  left: 0.5vw;
+  font-size: 1em;
+}
+

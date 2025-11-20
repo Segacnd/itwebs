@@ -1,357 +1,432 @@
 @keyframes from0 {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes animatedTextGradient {
-    to {
-        background-position: 200% center;
-    }
+  to {
+    background-position: 200% center;
+  }
 }
 
+.menuToggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.burgerImg,
+.closeImg {
+  width: 7vw;
+  height: 7vw;
+  transition: 0.3s;
+}
+
+.burgerImg {
+  opacity: 1;
+}
+
+.closeImg {
+  opacity: 0;
+  position: absolute;
+}
+
+/* dekstop*/
+
 .component {
-    width: 96vw;
-    padding: 2svh 2vw;
-    position: fixed;
-    z-index: 95;
-    left: 0;
-    top: 0;
-    display: flex;
-    height: 11svh;
-    transition: 1s;
-    margin: 0;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 96vw;
+  padding: 2svh 2vw;
+  z-index: 95;
+  left: 0;
+  top: 0;
+  display: flex;
+  height: 11svh;
+  transition: 1s;
+  margin: 0;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    padding-left: 7vw;
-    padding-right: 5vw;
-    width: 88vw;
-    column-gap: 0vw;
+  display: flex;
+  flex-direction: row;
+  padding-left: 7vw;
+  padding-right: 5vw;
+  width: 88vw;
+  column-gap: 0vw;
 }
 
 .navigation {
-    display: flex;
-    width: max-content;
-    column-gap: 4vw;
-    margin-left: 10vw;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  width: max-content;
+  column-gap: 4vw;
+  margin-left: 10vw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .navLink {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 500;
-    margin: 0;
-    font-size: 1.2vw;
-    text-decoration: none;
-    color: #d9d9d9;
-    text-transform: uppercase;
-    display: flex;
-    text-overflow: hidden;
-    white-space: nowrap;
-    flex-direction: column;
-    align-items: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: #d9d9d9;
+  text-transform: uppercase;
+  display: flex;
+  text-overflow: hidden;
+  white-space: nowrap;
+  flex-direction: column;
+  align-items: center;
 }
 
 .expressLink {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 500;
-    margin: 0;
-    font-size: 1.2vw;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: #d9d9d9;
+  text-transform: uppercase;
+  display: flex;
+  text-overflow: hidden;
+  white-space: wrap;
+  max-width: 15vw;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(
+    circle at 100%,
+    #fda8a8,
+    #f97878 50%,
+    #fec7c7 75%,
+    #ff7575 75%
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animatedTextGradient 1.5s linear infinite;
+
+  .linkUnderline {
+    background-color: #f97878;
+  }
+}
+
+.expressLink:hover {
+  animation-play-state: paused;
+
+  .linkUnderline {
+    width: 100%;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 1vw;
+  align-items: center;
+  margin-left: 4vw;
+}
+
+.navLink:hover {
+  .linkUnderline {
+    width: 80%;
+  }
+}
+
+.socialLink {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  transition: 0.7s;
+  overflow-x: visible;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+.socialLink:hover {
+  color: #007cf8;
+}
+
+.linkUnderline {
+  width: 0;
+  transform: translateY(1vw);
+  transition: 1s;
+  align-self: center;
+  background-color: #007cf8;
+  height: 1px;
+}
+
+.mobileMenuLinks {
+  transition: all 2s;
+  position: relative;
+}
+
+/*  dekstop */
+.mobileMenuOpenButton {
+  display: none;
+}
+
+.mobileMenuComponent {
+  display: none;
+}
+
+.mobileMenuDown {
+  margin-bottom: auto;
+  display: flex;
+  height: 20svh;
+  margin-top: 5svh;
+  align-self: center;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  animation: from0 2s forwards linear;
+  animation-delay: 0.3s;
+  transition: 2s;
+  transition-delay: 1s;
+  opacity: 0;
+}
+
+.consultRecomendComponent {
+  background: none;
+  height: 10vw;
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  margin-top: 0;
+  right: 5vw;
+  z-index: 98;
+}
+
+.consultRecomendContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-top: -0.3vw;
+  transition: 1s;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0;
+  transform: translateY(-100%);
+}
+
+.consultRecomendContainer.active {
+  transform: translateY(0);
+}
+
+.spiderIcon {
+  width: 5vw;
+  height: 5vw;
+  color: white;
+  margin-bottom: 0;
+}
+
+.consultComponent {
+  display: none;
+  margin-top: -0.5vw;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vw 1vw;
+}
+
+.consultText {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 1vw;
+  color: white;
+  text-transform: lowercase;
+}
+
+/* mobile */
+
+@media (max-width: 900px) {
+  .component {
+    display: flex;
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vw;
+  }
+
+  .container {
+    width: 90vw;
+    background: none;
+    align-self: center;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .mobileMenuOpenButton {
+    display: block;
+    background: none;
+    border: none;
+    transition: 1s;
+    position: relative;
+  }
+
+  .mobileMenuComponent {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    top: 0;
+    z-index: 99;
+    transition: 1s;
+    background-color: #1a1a1a;
+    overflow: hidden;
+
+    div {
+      flex-direction: column;
+    }
+  }
+
+  .mobileMenuInner {
+    width: 90vw;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .mobileMenuLinkss {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    height: 60svh;
+    transition: all 1.5s;
+    top: -300%;
+    align-items: flex-start;
+    row-gap: 3svh;
+  }
+
+  .mobileMenuLinksOpen {
+    top: 0;
+    transition: all 2s;
+  }
+
+  .navLink {
+    text-transform: uppercase;
+    font-size: 6vw;
+    font-weight: 200;
+    font-family: "Nunito Sans", sans-serif;
     text-decoration: none;
     color: #d9d9d9;
-    text-transform: uppercase;
     display: flex;
-    text-overflow: hidden;
     white-space: wrap;
-    max-width: 15vw;
-    text-align: center;
     flex-direction: column;
     align-items: center;
-    background: radial-gradient(circle at 100%,
-            #fda8a8,
-            #f97878 50%,
-            #fec7c7 75%,
-            #ff7575 75%);
+  }
+
+  .expressLink {
+    text-transform: uppercase;
+    font-size: 6vw;
+    font-weight: 200;
+    font-family: "Nunito Sans", sans-serif;
+    text-decoration: none;
+    color: #d9d9d9;
+    display: flex;
+    white-space: wrap;
+    flex-direction: column;
+    max-width: none;
+    align-items: center;
+    background: radial-gradient(
+      circle at 100%,
+      #fda8a8,
+      #f97878 50%,
+      #fec7c7 75%,
+      #ff7575 75%
+    );
     background-size: 200% auto;
     color: #000;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animatedTextGradient 1.5s linear infinite;
+  }
 
-    .linkUnderline {
-        background-color: #f97878;
-    }
-}
-
-.expressLink:hover {
-    animation-play-state: paused;
-
-    .linkUnderline {
-        width: 100%;
-    }
-}
-
-.links {
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 1vw;
-    align-items: center;
-    margin-left: 4vw;
-}
-
-.navLink:hover {
-    .linkUnderline {
-        width: 80%;
-    }
-}
-
-.socialLink {
-    cursor: pointer;
-    color: white;
+  .socialLink {
+    color: #007cf8;
     text-decoration: none;
-    transition: 0.7s;
-    overflow-x: visible;
-    white-space: nowrap;
-    text-wrap: nowrap;
+  }
+
+  .mobileMenuLogo {
+    margin-top: 2svh;
+    font-weight: 700;
+    color: #007cf8;
+    text-decoration: none;
+    font-size: 5vw;
+  }
+.mobileMenuCloseButton {
+  cursor: pointer;
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  z-index: 100;
+  right: 5vw;
+  top: 5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.socialLink:hover {
-    color: #007CF8;
+.mobileMenuCloseButtonIcon {
+  width: 100%;
+  height: 100%;
+  color: gray;
 }
+  .logo {
+    padding-left: 1svw;
+  }
 
-.linkUnderline {
-    width: 0;
-    transform: translateY(1vw);
-    transition: 1s;
-    align-self: center;
-    background-color: #007CF8;
-    height: 1px;
-}
+  /* checkbox */
+  /* input checkbox и mobile находятся на одном уровне   */
+  .menuToggle:checked ~ .mobileMenuComponent {
+    height: 100svh;
+  }
 
-.mobileMenuLinks {
-    transition: all 2s;
-    position: relative;
-}
+  .menuToggle:checked ~ .mobileMenuComponent .mobileMenuLinkss {
+    top: 0;
+  }
 
-.mobileMenuOpenButton {
-    display: none;
-}
+  .menuToggle:checked ~ .mobileMenuComponent .mobileMenuDown {
+    opacity: 1;
+  }
 
-.mobileMenuComponent {
-    display: none;
-}
-
-.mobileMenuDown {
-    margin-bottom: auto;
-    display: flex;
-    height: 20svh;
-    margin-top: 5svh;
-    align-self: center;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    animation: from0 2s forwards linear;
-    animation-delay: 0.3s;
-    transition: 2s;
-    transition-delay: 1s;
+  .menuToggle:checked + .container .mobileMenuOpenButton .burgerImg {
     opacity: 0;
-}
+  }
 
-.consultRecomendComponent {
-    background: none;
-    height: 10vw;
-    width: 10vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    position: fixed;
-    margin-top: 0;
-    right: 5vw;
-    z-index: 98;
-}
-
-.consultRecomendContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin-top: -0.3vw;
-    transition: 1s;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 0;
-    transform: translateY(-100%);
-}
-
-.consultRecomendContainer.active {
-    transform: translateY(0);
-}
-
-.spiderIcon {
-    width: 5vw;
-    height: 5vw;
-    color: white;
-    margin-bottom: 0;
-}
-
-.consultComponent {
-    display: none;
-    margin-top: -0.5vw;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5vw 1vw;
-}
-
-.consultText {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 500;
-    font-size: 1vw;
-    color: white;
-    text-transform: lowercase;
-}
-
-@media (max-width: 900px) {
-    .component {
-        display: flex;
-        width: 100vw;
-        padding-left: 0;
-        padding-right: 0;
-        flex-direction: column;
-        justify-content: center;
-        height: 10vw;
-    }
-
-    .container {
-        width: 90vw;
-        background: none;
-        align-self: center;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navigation {
-        display: none;
-    }
-
-    .links {
-        display: none;
-    }
-
-    .mobileMenuOpenButton {
-        display: block;
-        background: none;
-        border: none;
-        transition: 1s;
-
-        svg {
-            transition: 1s;
-            opacity: 0;
-            animation: from0 1s linear forwards;
-            scale: 1.2;
-        }
-    }
-
-    .mobileMenuComponent {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        left: 0;
-        width: 100vw;
-        height: 100svh;
-        top: 0;
-        z-index: 99;
-        transition: 1s;
-        background-color: #1a1a1a;
-
-        div {
-            flex-direction: column;
-        }
-    }
-
-    .mobileMenuLinkss {
-        position: relative;
-        display: flex;
-        overflow: hidden;
-        flex-direction: column;
-        justify-content: center;
-        height: 60svh;
-        transition: all 1.5s;
-        top: -300%;
-        align-items: flex-start;
-        row-gap: 3svh;
-    }
-
-    .mobileMenuLinksOpen {
-        top: 0;
-        transition: all 2s;
-    }
-
-    .navLink {
-        text-transform: uppercase;
-        font-size: 6vw;
-        font-weight: 200;
-        font-family: 'Nunito Sans', sans-serif;
-        text-decoration: none;
-        color: #d9d9d9;
-        display: flex;
-        white-space: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .expressLink {
-        text-transform: uppercase;
-        font-size: 6vw;
-        font-weight: 200;
-        font-family: 'Nunito Sans', sans-serif;
-        text-decoration: none;
-        color: #d9d9d9;
-        display: flex;
-        white-space: wrap;
-        flex-direction: column;
-        max-width: none;
-        align-items: center;
-        background: radial-gradient(circle at 100%,
-                #fda8a8,
-                #f97878 50%,
-                #fec7c7 75%,
-                #ff7575 75%);
-        background-size: 200% auto;
-        color: #000;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: animatedTextGradient 1.5s linear infinite;
-    }
-
-    .socialLink {
-        color: #007CF8;
-        text-decoration: none;
-    }
-
-    .mobileMenuLogo {
-        margin-top: 2svh;
-        font-weight: 700;
-        color: #007CF8;
-        text-decoration: none;
-        font-size: 5vw;
-    }
-
-    .logo{
-        padding-left: 1svw;
-    }
+  .menuToggle:checked + .container .mobileMenuOpenButton .closeImg {
+    opacity: 1;
+  }
 }

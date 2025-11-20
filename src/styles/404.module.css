@@ -74,7 +74,10 @@
         margin: 0;
     }
 }
-
+.buttonContainer{
+    display: flex;
+    gap: 10px;
+}
 .buttonLink{
     transform: rotateZ(0);
     margin-top: 10svh;
@@ -93,6 +96,7 @@
     animation: spinner 2s linear forwards;
     border-radius: 21px;
     font-weight: 300;
+    text-decoration: none;
 }
 .buttonLink:hover{
     background-color: gray;
