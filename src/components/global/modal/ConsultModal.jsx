@@ -1,9 +1,9 @@
-import * as styles from "./globales.module.css";
-import * as modalStyles from './consult-modal.module.css'
+import * as styles from "../globales.module.css";
+import * as modalStyles from "./consult-modal.module.css";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-import ConsultModalForm from "./form/ConsultModalForm";
-import Loader from "./Loader";
+import ConsultModalForm from "./ConsultModalForm";
+import Loader from "../Loader";
 import { CONSALT_MODAL_ID } from "@/constants/modal-constants";
 
 const ConsultModal = ({ loading, setLoading, isOpen }) => {
@@ -24,7 +24,7 @@ const ConsultModal = ({ loading, setLoading, isOpen }) => {
               />
             </label>
           </div>
-          <ConsultModalForm setLoading={setLoading} isOpen={isOpen}/>
+          <ConsultModalForm setLoading={setLoading} isOpen={isOpen} />
         </div>
       </div>
     </>
