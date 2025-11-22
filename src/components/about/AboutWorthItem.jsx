@@ -4,7 +4,7 @@ import * as styles from './about.module.css';
 import * as motion from 'motion/react-client'
 import { useEffect, useState } from 'react';
 
-
+// TODO: 
 const AboutWorthItem = ({ icon = 'radix-icons:value-none', name = 'name', description = 'desc', id, delay = 0 }) => {
     const [wind,setWind] = useState(null);
     useEffect(()=>{

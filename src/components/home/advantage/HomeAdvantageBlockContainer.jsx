@@ -5,10 +5,10 @@ import HomeAdvantageBlockContainerItem from "./HomeAdvantageBlockContainerItem";
 export default function HomeAdvantageBlockContainer() {
   return (
     <div className={stylesMain.advantagesContainer}>
-      <HomeAdvantageBlockContainerItem block1={ADVANTAGES[0]} block2={ADVANTAGES[1]} />
+      <HomeAdvantageBlockContainerItem leftSide={ADVANTAGES[0]} rightSide={ADVANTAGES[1]} />
       <HomeAdvantageBlockContainerItem
-        block1={ADVANTAGES[2]}
-        block2={ADVANTAGES[3]}
+        leftSide={ADVANTAGES[2]}
+        rightSide={ADVANTAGES[3]}
         translate="translateX(90%)"
         translateSecond="translateX(-30%)"
       />

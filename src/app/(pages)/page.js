@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import HomeFirstBlock from "@/components/home/HomeFirstBlock";
 // import ConsultButton from "@/components/buttons/ConsultButton";
 import HomeAdvantagesBlock from "@/components/home/advantage/HomeAdvantagesBlock";
-import HomeStages from "@/components/home/HomeStages";
+import HomeStages from "@/components/home/stages/HomeStages";
 import HomeServicesBlock from "@/components/home/HomeServicesBlock";
 import HomeWorks from "@/components/home/HomeWorks";
 import HomeTechBlock from "@/components/home/HomeTechBlock";
