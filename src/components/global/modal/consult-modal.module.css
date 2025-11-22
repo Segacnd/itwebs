@@ -8,3 +8,8 @@
   font-size: 2vw;
   white-space: nowrap;
 } 
+@media(max-width: 900px){
+  .modalTitle {
+  font-size: 2svh;
+} 
+}

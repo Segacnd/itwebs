@@ -1,912 +1,566 @@
 @keyframes fromBottom {
-    0% {
-        transform: translateY(-50svh);
-    }
+  0% {
+    transform: translateY(-50svh);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes infiniteColors {
-    0% {
-        background: rgba(120, 120, 128, 0.16);
-    }
+  0% {
+    background: rgba(120, 120, 128, 0.16);
+  }
 
-    50% {
-        background-color: #007CF8;
-    }
+  50% {
+    background-color: #007cf8;
+  }
 
-    75% {
-        background-color: #1a1a1a;
-    }
+  75% {
+    background-color: #1a1a1a;
+  }
 
-    100% {
-        background: rgba(120, 120, 128, 0.16);
-    }
+  100% {
+    background: rgba(120, 120, 128, 0.16);
+  }
 }
 
 .title {
-    font-size: 2.3vw;
+  font-size: 2.3vw;
+  font-weight: 700;
+  color: white;
+  width: max-content;
+  b {
     font-weight: 700;
-    color: white;
-    width: max-content;
-    b{
-        font-weight: 700;
-    }
+  }
 }
 
 .subtitle {
-    margin: 0;
-    font-size: 1.5vw;
-    font-weight: 300;
-    width: 48%;
-    
+  margin: 0;
+  font-size: 1.5vw;
+  font-weight: 300;
+  width: 48%;
 }
 
 .headText {
-    display: flex;
-    margin-top: 8svh;
-    flex-direction: column;
-    row-gap: 3svh;
-    width: 100%;
-    align-self: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  margin-top: 8svh;
+  flex-direction: column;
+  row-gap: 3svh;
+  width: 100%;
+  align-self: center;
+  align-items: center;
+  text-align: center;
 }
 
 .triangles {
-    display: grid;
-    z-index: 1;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 8svh;
-    height: 100%;
-    column-gap: 1vw;
-    width: 100%;
-    overflow: hidden;
+  display: grid;
+  z-index: 1;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 8svh;
+  height: 100%;
+  column-gap: 1vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .triangleLeft {
-    display: flex;
-    width: 80%;
-    height: 100%;
+  display: flex;
+  width: 80%;
+  height: 100%;
+  padding: 0;
+  padding-top: 5svh;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  svg {
     padding: 0;
-    padding-top: 5svh;
-    flex-direction: row;
-    justify-content: flex-end;
+    display: flex;
 
-    svg {
-        padding: 0;
-        display: flex;
-
-        path {
-            margin: 0;
-        }
+    path {
+      margin: 0;
     }
+  }
 }
 
 .triangleRight {
-    display: flex;
-    width: 80%;
-    height: 100%;
+  display: flex;
+  width: 80%;
+  height: 100%;
+  padding: 0;
+  padding-top: 5svh;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  svg {
     padding: 0;
-    padding-top: 5svh;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: flex;
 
-    svg {
-        padding: 0;
-        display: flex;
-
-        path {
-            margin: 0;
-        }
+    path {
+      margin: 0;
     }
+  }
 }
 
 .headTriangleText {
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    width: 7vw;
-    height: 18vw;
-    font-family: 'Nunito Sans', sans-serif;
-    padding: 0vw 1svh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 7vw;
+  height: 18vw;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0vw 1svh;
 }
 
 .headTextSec {
-    font-size: 1.1vw;
+  font-size: 1.1vw;
 }
 
 .headTextMain {
-    font-weight: 700;
-    font-size: 2.1vw;
-    color: white;
-    span {
-        font-size: 1.3vw;
-    }
+  font-weight: 700;
+  font-size: 2.1vw;
+  color: white;
+  span {
+    font-size: 1.3vw;
+  }
 }
 
 .worthsContainer {
-    display: grid;
-    margin-top: 5svh;
-    height: 40svh;
-    grid-template-columns: repeat(4, 20vw);
-    column-gap: 0.6vw;
-    overflow: hidden;
+  display: grid;
+  margin-top: 5svh;
+  height: 40svh;
+  grid-template-columns: repeat(4, 20vw);
+  column-gap: 0.6vw;
+  overflow: hidden;
 }
 
 .worthsItem {
-    display: flex;
-    flex-direction: column;
-    height: 40svh;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(21px);
-    -webkit-backdrop-filter: blur(21px);
-    color: white;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 40svh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(21px);
+  -webkit-backdrop-filter: blur(21px);
+  color: white;
+  justify-content: center;
+  align-items: center;
 
-    * {
-        font-family: 'Gilroy Bold', sans-serif;
-    }
+  * {
+    font-family: "Gilroy Bold", sans-serif;
+  }
 }
 
 .worthName {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.5vw;
-    margin-top: 3svh;
-    text-align: center;
-    margin-bottom: 5svh;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5vw;
+  margin-top: 3svh;
+  text-align: center;
+  margin-bottom: 5svh;
 }
 
 .worthDesc {
-    font-size: 1vw;
-    font-weight: 300;
-    max-width: 80%;
-    width: auto;
-    text-align: center;
+  font-size: 1vw;
+  font-weight: 300;
+  max-width: 80%;
+  width: auto;
+  text-align: center;
 }
 
 .worthIcon {
-    width: 5vw;
-    height: 5vw;
-}
-
-.blockHeading {
-    margin-bottom: 2svh;
-    height: 15svh;
-    overflow: hidden;
-
-    * {
-        color: white;
-        font-size: 2vw;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-}
-
-.aboutSecStagesContainer {
-    max-width: 90vw;
-    z-index: 10;
-    width: auto;
-    overflow: hidden;
-    align-self: center;
-    display: flex;
-    max-height: 110svh;
-    flex-direction: column;
-    height: auto;
-    max-height: 100svh;
-    align-items: center;
-    justify-items: center;
-    column-gap: 3vw;
-}
-
-.aboutSecStagesLine {
-    display: flex;
-    height: 22vw;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    column-gap: 3vw;
-}
-
-.aboutStageItem {
-    display: flex;
-    flex-direction: column;
-    row-gap: 4svh;
-    height: 17vw;
-    overflow: hidden;
-    width: 19vw;
-    padding: 1vw;
-    align-items: center;
-    font-family: 'Nunito Sans', sans-serif;
-    border-radius: 21px;
-    text-align: center;
-    color: white;
-
-    * {
-        cursor: default;
-    }
-
-    .aboutStagesSecondSVG {
-        opacity: 1;
-        border-radius: 6px;
-        position: absolute;
-        transition: 1s;
-        z-index: 8;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        path {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .aboutStagesFirstSVG {
-        display: none;
-        position: absolute;
-        z-index: 7;
-        border-radius: 6px;
-    }
-}
-
-.aboutStageItem:hover {
-    .aboutStagesSecondSVG {
-        opacity: 1;
-        filter: drop-shadow(1px 1px 10px #007CF8);
-    }
-}
-
-.aboutStageNum {
-    position: relative;
-    display: flex;
-    left: 1.6vw;
-    top: 3vw;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    z-index: 9;
-    font-weight: 300;
-    font-size: 1.4vw;
-}
-
-.aboutStageName {
-    margin-top: 8svh;
-    z-index: 9;
-    font-weight: 500;
-    text-align: center;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.aboutStageText {
-    z-index: 9;
-    font-weight: 300;
-    text-align: center;
-    font-size: 0.8vw;
-    max-width: 80%;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.aboutPartnersContainer {
-    width: 75vw;
-    overflow: hidden;
-    overflow-x: hidden;
-    margin-top: 10svh;
-    height: 20svh;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    align-self: center;
-    column-gap: 10vw;
-}
-
-.aboutPartnerItem {
-    position: relative;
-    width: 15vw;
-    height: 8vw;
+  width: 5vw;
+  height: 5vw;
 }
 
 .consultBlock {
-    width: 88vw;
-    align-self: center;
-    height: 50vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-bottom: -10svh;
+  width: 88vw;
+  align-self: center;
+  height: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: -10svh;
 
-    div {
-        font-family: 'Nunito Sans', sans-serif;
-    }
+  div {
+    font-family: "Nunito Sans", sans-serif;
+  }
 }
 
 .consultTextBlock {
-    position: absolute;
-    left: 8vw;
-    color: white;
-    width: 60vw;
-    justify-self: flex-start;
+  position: absolute;
+  left: 8vw;
+  color: white;
+  width: 60vw;
+  justify-self: flex-start;
 }
 
 .consultBlockText {
-    margin-top: 5svh;
+  margin-top: 5svh;
 }
 
 .consultInputs {
-    z-index: 9;
-    width: 44vw;
-    margin-top: 15svh;
-    row-gap: 5svh;
-    display: flex;
-    flex-direction: column;
+  z-index: 9;
+  width: 44vw;
+  margin-top: 15svh;
+  row-gap: 5svh;
+  display: flex;
+  flex-direction: column;
 
-    button {
-        background: rgba(120, 120, 128, 0.16);
-        font-family: 'Nunito Sans', sans-serif;
-        letter-spacing: 0.08vw;
-        padding: 2svh 1vw;
-        font-size: 1vw;
-        border-radius: 21px;
-        border: none;
-        outline: none;
-        transition: 1s;
-        color: white;
-        width: 42vw;
-        cursor: pointer;
-        align-self: center;
-    }
+  button {
+    background: rgba(120, 120, 128, 0.16);
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: 0.08vw;
+    padding: 2svh 1vw;
+    font-size: 1vw;
+    border-radius: 21px;
+    border: none;
+    outline: none;
+    transition: 1s;
+    color: white;
+    width: 42vw;
+    cursor: pointer;
+    align-self: center;
+  }
 
-    button:active {
-        background-color: #007CF8;
-
-    }
-
-
-
+  button:active {
+    background-color: #007cf8;
+  }
 }
 
 .buttonActive {
-    animation: 4s infiniteColors infinite ease-in-out;
+  animation: 4s infiniteColors infinite ease-in-out;
 }
 
 .consultInputPair {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    * {
-        font-family: 'Nunito Sans', sans-serif;
-        font-weight: 300;
-    }
+  * {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+  }
 
-    label {
-        padding-left: 2.5vw;
-        margin-bottom: 1svh;
-    }
+  label {
+    padding-left: 2.5vw;
+    margin-bottom: 1svh;
+  }
 
-    input {
-        border-radius: 21px;
-        border: none;
-        outline: none;
-        padding: 1.4svh 2vw;
-        align-self: center;
-        width: 38vw;
-        color: white;
-        font-size: 1vw;
-        background: rgba(120, 120, 128, 0.16);
-    }
+  input {
+    border-radius: 21px;
+    border: none;
+    outline: none;
+    padding: 1.4svh 2vw;
+    align-self: center;
+    width: 38vw;
+    color: white;
+    font-size: 1vw;
+    background: rgba(120, 120, 128, 0.16);
+  }
 
-    textarea {
-        padding: 2svh 1.5vw;
-        align-self: center;
-        width: 38vw;
-        resize: none;
-        height: 15svh;
-        color: white;
-        font-size: 1vw;
-        border-radius: 21px;
-        border: none;
-        outline: none;
-        background: rgba(120, 120, 128, 0.16);
-
-    }
+  textarea {
+    padding: 2svh 1.5vw;
+    align-self: center;
+    width: 38vw;
+    resize: none;
+    height: 15svh;
+    color: white;
+    font-size: 1vw;
+    border-radius: 21px;
+    border: none;
+    outline: none;
+    background: rgba(120, 120, 128, 0.16);
+  }
 }
 
 .consultBlockHeading {
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-    width: auto;
-    max-width: 60vw;
-    z-index: 11;
-    line-height: 10svh;
-    letter-spacing: 0.2vw;
-    font-weight: 800;
-    font-size: 3.2vw;
-}
-
-.blockHeadingMotion {
-    height: 25svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  width: auto;
+  max-width: 60vw;
+  z-index: 11;
+  line-height: 10svh;
+  letter-spacing: 0.2vw;
+  font-weight: 800;
+  font-size: 3.2vw;
 }
 
 .triangleOne {
-    width: 10vw;
-    height: 20vw;
-}
-
-.aboutStageItemContainer {
-    height: 20vw;
-    display: 'flex';
-    align-items: 'center';
-    justify-content: 'center';
-    flex-direction: 'column';
-    width: 20vw;
+  width: 10vw;
+  height: 20vw;
 }
 
 @media (max-width: 900px) {
+  .headText {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
-    .headText {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        .title {
-            text-align: start;
-            width: 100%;
-            align-self: flex-start;
-            font-size: 5vw;
-            color: white;
-            font-family: 'Gilroy', sans-serif;
-        }
-
-        .subtitle {
-            font-size: 4vw;
-            text-align: start;
-            align-self: flex-start;
-            width: 100%;
-        }
+    .title {
+      text-align: start;
+      width: 100%;
+      align-self: flex-start;
+      font-size: 5vw;
+      color: white;
+      font-family: "Gilroy", sans-serif;
     }
+
+    .subtitle {
+      font-size: 4vw;
+      text-align: start;
+      align-self: flex-start;
+      width: 100%;
+    }
+  }
+
+  .triangleOne {
+    width: 70vw;
+    height: 80vw;
+
+    path {
+      width: 70vw;
+      height: 80vw;
+    }
+  }
+
+  .triangleLeft {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70vw;
+    height: 80vw;
 
     .triangleOne {
-        width: 70vw;
-        height: 80vw;
-
-        path {
-            width: 70vw;
-            height: 80vw;
-        }
-    }
-
-    .triangleLeft {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 70vw;
-        height: 80vw;
-
-        .triangleOne {
-            margin-right: 0;
-            display: flex;
-            transform: translateX(-11.5vw);
-
-            path {}
-        }
-
-        .headTriangleText {
-            position: absolute;
-            justify-self: flex-start;
-            justify-content: flex-start;
-            position: relative;
-            transform: translateX(15vw) translateY(57vw);
-            width: fit-content;
-
-            .headTextMain {
-                display: flex;
-                align-items: center;
-                column-gap: 2vw;
-                flex-direction: row;
-                width: fit-content;
-                font-size: 8vw;
-
-                span {
-                    font-size: 6vw;
-                }
-            }
-        }
+      margin-right: 0;
+      display: flex;
+      transform: translateX(-11.5vw);
     }
 
     .headTriangleText {
-        align-items: flex-end;
-        width: auto;
+      position: absolute;
+      justify-self: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      transform: translateX(15vw) translateY(57vw);
+      width: fit-content;
 
-        .headTextMain {
-            width: auto;
-            font-size: 7vw;
-
-            span {
-                font-size: 4.5vw;
-            }
-        }
-
-        .headTextSec {
-            font-size: 3vw;
-        }
-    }
-
-    .triangleRight {
-        width: 70vw;
+      .headTextMain {
         display: flex;
+        align-items: center;
+        column-gap: 2vw;
         flex-direction: row;
-        height: 80vw;
-        transform: translateX(0vw);
+        width: fit-content;
+        font-size: 8vw;
 
-        .triangleOne {
-            display: flex;
-            flex-direction: row;
-            transform: translateX(5vw);
-
-            path {
-                margin-left: 0;
-            }
+        span {
+          font-size: 6vw;
         }
+      }
+    }
+  }
 
-        .headTriangleText {
-            position: absolute;
-            justify-self: flex-start;
-            text-align: start;
-            justify-content: flex-start;
-            align-items: flex-start;
-            position: relative;
-            transform: translateX(21vw) translateY(1vw);
+  .headTriangleText {
+    align-items: flex-end;
+    width: auto;
 
-            * {
-                text-align: start;
-            }
-        }
+    .headTextMain {
+      width: auto;
+      font-size: 7vw;
+
+      span {
+        font-size: 4.5vw;
+      }
     }
 
-    .blockHeading {
-        height: 10svh;
+    .headTextSec {
+      font-size: 3vw;
+    }
+  }
+
+  .triangleRight {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    height: 80vw;
+    transform: translateX(0vw);
+
+    .triangleOne {
+      display: flex;
+      flex-direction: row;
+      transform: translateX(5vw);
+
+      path {
+        margin-left: 0;
+      }
     }
 
-    .blockHeadingMotion {
-        height: 10svh;
-        margin-bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+    .headTriangleText {
+      position: absolute;
+      justify-self: flex-start;
+      text-align: start;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+      transform: translateX(21vw) translateY(1vw);
 
-        * {
-            font-size: 5vw;
-        }
+      * {
+        text-align: start;
+      }
+    }
+  }
+
+  .worthsContainer {
+    display: grid;
+    margin-top: 3svh;
+    align-self: center;
+    min-height: 40svh;
+    height: auto;
+    max-height: max-content;
+    min-width: 40svh;
+    width: auto;
+    max-width: max-content;
+    margin-bottom: 5svh;
+    grid-template-columns: repeat(2, 20svh);
+    grid-template-rows: repeat(2, 22svh);
+    align-content: center;
+    grid-row-gap: -2vw;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .worthsItem {
+    display: flex;
+    flex-direction: column;
+    height: 20svh;
+    width: 20svh;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+    * {
+      font-family: "Nunito Sans", sans-serif;
+    }
+  }
+
+  .worthName {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3vw;
+    margin-top: 2svh;
+    text-align: center;
+    margin-bottom: 1svh;
+  }
+
+  .worthDesc {
+    font-size: 2vw;
+    font-weight: 300;
+    max-width: 80%;
+    width: auto;
+    text-align: center;
+  }
+
+  .worthIcon {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  .aboutStagesFirstSVG {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .consultBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    justify-content: flex-start;
+    height: auto;
+    margin-bottom: 5svh;
+  }
+
+  .consultTextBlock {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-self: flex-start;
+    top: 0;
+    left: 0;
+    row-gap: 2svh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: none;
+    overflow: hidden;
+    width: 70vw;
+
+    * {
+      font-size: 4vw;
+    }
+  }
+
+  .consultBlockHeading {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: max-content;
+    padding: 0;
+    line-height: normal;
+  }
+
+  .consultBlockText {
+    margin-top: 0;
+    padding-left: 3vw;
+    width: 100%;
+  }
+
+  .consultInputs {
+    margin-top: 2svh;
+    padding-left: 4vw;
+    width: 84vw;
+    row-gap: 2svh;
+
+    * {
+      width: 84vw;
+      max-width: 84vw;
     }
 
-    .worthsContainer {
-        display: grid;
-        margin-top: 3svh;
-        align-self: center;
-        min-height: 40svh;
-        height: auto;
-        max-height: max-content;
-        min-width: 40svh;
-        width: auto;
-        max-width: max-content;
-        margin-bottom: 5svh;
-        grid-template-columns: repeat(2, 20svh);
-        grid-template-rows: repeat(2, 22svh);
-        align-content: center;
-        grid-row-gap: -2vw;
-        justify-content: center;
-        overflow: hidden;
+    button {
+      width: 89.1vw;
+      max-width: 90vw;
+      padding: 2svh 0;
+      align-self: flex-start;
+      font-size: 3vw;
+      transform: translateX(-5vw);
+    }
+  }
+
+  .consultInputPair {
+    width: 80vw;
+    align-items: flex-start;
+
+    input {
+      width: 77vw;
+      height: 3svh;
+      padding: 1.5svh 5vw;
+      font-size: 3.5vw;
     }
 
-    .worthsItem {
-        display: flex;
-        flex-direction: column;
-        height: 20svh;
-        width: 20svh;
-        background: rgba(0, 0, 0, 0.7);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(25px);
-        -webkit-backdrop-filter: blur(25px);
-        color: white;
-        justify-content: center;
-        align-items: center;
-
-        * {
-            font-family: 'Nunito Sans', sans-serif;
-        }
+    textarea {
+      width: 80vw;
+      font-size: 3.5vw;
+      padding: 4vw;
     }
-
-    .worthName {
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 3vw;
-        margin-top: 2svh;
-        text-align: center;
-        margin-bottom: 1svh;
-    }
-
-    .worthDesc {
-        font-size: 2vw;
-        font-weight: 300;
-        max-width: 80%;
-        width: auto;
-        text-align: center;
-    }
-
-    .worthIcon {
-        width: 12vw;
-        height: 12vw;
-    }
-
-    .aboutSecStagesContainer {
-        z-index: 10;
-        overflow: hidden;
-        width: 90vw;
-        position: relative;
-        align-self: center;
-        padding-left: 60vw;
-        display: flex;
-        flex-direction: column;
-        height: 61vw;
-        align-items: center;
-        justify-items: center;
-        justify-content: center;
-    }
-
-    .aboutSecStagesLine::-webkit-scrollbar {
-        width: 1px;
-        height: 1px;
-    }
-
-    .aboutStageItem {
-        width: 60vw;
-        height: 60vw;
-        display: flex;
-        flex-direction: column;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-        row-gap: 1svh;
-        overflow: hidden;
-        position: relative;
-        align-items: center;
-        font-family: 'Nunito Sans', sans-serif;
-        border-radius: 21px;
-        text-align: center;
-        color: white;
-
-        * {
-            cursor: default;
-        }
-
-        .aboutStagesSecondSVG {
-            opacity: 1;
-            border-radius: 6px;
-            position: absolute;
-            transition: 1s;
-            color: #1a1a1a;
-            z-index: 8;
-            width: 59vw;
-            padding-right: 2vw;
-            height: 59vw;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            path {
-                width: 70vw;
-                height: 60vw;
-                background-color: black;
-
-            }
-        }
-
-        .aboutStagesFirstSVG {
-            display: none;
-            position: absolute;
-            z-index: 7;
-            border-radius: 6px;
-        }
-    }
-
-    .aboutStageItem:hover{
-        filter: none;
-        .aboutStagesSecondSVG {
-        opacity: 1;
-        filter: none;
-    }
-    }
-
-    .aboutStageNum {
-        font-size: 4vw;
-        font-family: 'Gilroy Bold', sans-serif;
-        left: -24.5vw;
-        top: 6.5vw;
-    }
-
-    .aboutStageText {
-        margin-top: 0;
-        z-index: 13;
-        display: flex;
-        font-size: 2.5vw;
-        font-weight: 300;
-    }
-
-    .aboutStagesSecondSVG {
-        width: 60vw;
-        height: 60vw;
-    }
-
-    .aboutStagesFirstSVG {
-        width: 60vw;
-        height: 60vw;
-    }
-
-    .aboutStageName {
-        margin-bottom: 1svh;
-    }
-
-    .aboutStageItemContainer {
-        overflow: hidden;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-        height: 60vw;
-        position: block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 60vw;
-    }
-
-    .aboutSecStagesLine {
-        display: grid;
-        position: relative;
-        grid-template-columns: repeat(9, 1fr);
-        height: 60vw;
-        align-self: flex-start;
-        justify-content: flex-start;
-        align-items: center;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        left: -26vw;
-        column-gap: 20vw;
-        width: 86vw;
-
-        * {
-            scroll-snap-align: center;
-            scroll-snap-stop: always;
-        }
-    }
-
-    .aboutPartnersContainer {
-        width: 80vw;
-        overflow: hidden;
-        margin-top: 0;
-        overflow-x: hidden;
-        height: max-content;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-self: center;
-        column-gap: 0;
-        row-gap: 0;
-    }
-
-    .aboutPartnerItem {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        .aboutPartnersImage {
-            display: block;
-            width: 35vw;
-            height: 35vw;
-            scale: 0.8;
-        }
-    }
-
-    .consultBlock {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90vw;
-        justify-content: flex-start;
-        height: auto;
-        margin-bottom: 5svh;
-    }
-
-    .consultTextBlock {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        align-self: flex-start;
-        top: 0;
-        left: 0;
-        row-gap: 2svh;
-        justify-content: flex-start;
-        align-items: flex-start;
-        transform: none;
-        overflow: hidden;
-        width: 70vw;
-
-        * {
-            font-size: 4vw;
-        }
-    }
-
-    .consultBlockHeading {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        max-width: max-content;
-        padding: 0;
-        line-height: normal;
-    }
-
-    .consultBlockText {
-        margin-top: 0;
-        padding-left: 3vw;
-        width: 100%;
-    }
-
-    .consultInputs {
-        margin-top: 2svh;
-        padding-left: 4vw;
-        width: 84vw;
-        row-gap: 2svh;
-
-        * {
-            width: 84vw;
-            max-width: 84vw;
-        }
-
-        button {
-            width: 89.1vw;
-            max-width: 90vw;
-            padding: 2svh 0;
-            align-self: flex-start;
-            font-size: 3vw;
-            transform: translateX(-5vw);
-        }
-    }
-
-    .consultInputPair {
-        width: 80vw;
-        align-items: flex-start;
-
-        input {
-            width: 77vw;
-            height: 3svh;
-            padding: 1.5svh 5vw;
-            font-size: 3.5vw;
-        }
-
-        textarea {
-            width: 80vw;
-            font-size: 3.5vw;
-            padding: 4vw;
-        }
-    }
-
-    .mobilePaddingLeft {
-        margin-left: 5vw;
-    }
+  }
+  .mobilePaddingLeft {
+    margin-left: 5vw;
+  }
 }
