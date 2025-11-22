@@ -24,7 +24,7 @@ import SecBackground from "@/components/global/SecBackground";
 // import StoreProvider from "./StoreProvider";
 import Script from "next/script";
 
-import ConsultModalWrapper from "@/components/global/ConsultModalWrapper";
+import ConsultModalWrapper from "@/components/global/modal/ConsultModalWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

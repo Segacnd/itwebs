@@ -83,7 +83,25 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 65svh;
 }
-
+.advantagesContainerMobile {
+    display: none;
+    margin-top: 5svh;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    width: 80vw;
+    align-self: center;
+    column-gap: 2vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 65svh;
+}
+@media(max-width: 900px){
+.advantagesContainerMobile {
+    display: grid
+}
+.advantagesContainer{
+    display: none;
+}
+}
 .leftAdvantages {
     display: grid;
     height: 65svh;

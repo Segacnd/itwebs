@@ -4,10 +4,10 @@ export const defaultValues = {
   name: "",
   email: "",
   phone: "",
+  serviceLink: "",
   comment: "",
-  allow: false,
 };
-export const consultFormschema = z.object({
+export const homeConsultschema = z.object({
   name: z
     .string()
     .min(1, "Имя это обязательное поле!")

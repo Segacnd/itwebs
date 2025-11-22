@@ -1,4 +1,5 @@
-import * as styles from './about.module.css';
+'use client'
+import * as styles from '../about.module.css';
 import * as motion from 'motion/react-client';
 
 const AboutStageItem = ({ num, name, text }) => {
