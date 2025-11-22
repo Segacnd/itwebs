@@ -1,44 +1,25 @@
-"use client";
-import * as homeStyles from "../../home/stages/stages.module.css";
-import * as motion from "motion/react-client";
-import HomeStageItem from "../../home/stages/HomeStageItem";
+'use client'
+import * as styles from "./about-stage.module.css";
 
-export default function AboutStagesContainer({stages}) {
+import * as motion from "motion/react-client";
+import AboutStagesContainerLine from "./AboutStagesContainerLine";
+
+const AboutStagesContainer = ({ stages }) => {
   return (
-    <motion.div
-      transition={{ duration: 1, ease: "easeOut" }}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ amount: 0.4 }}
-      className={homeStyles.stagesContainer}
-      style={{ animation: "none" }}
-    >
-      <div className={homeStyles.stagesContainerFirstLine}>
-        {stages
-          .slice(0, 8)
-          .filter((item) => item.id % 2 == 1)
-          .map((item) => (
-            <HomeStageItem
-              key={item.id}
-              num={item.id}
-              name={item.name}
-              desc={item.text}
-            />
-          ))}
-      </div>
-      <div className={homeStyles.stagesContainerSecondLine}>
-        {stages
-          .slice(0, 8)
-          .filter((item) => item.id % 2 == 0)
-          .map((item) => (
-            <HomeStageItem
-              key={item.id}
-              num={item.id}
-              name={item.name}
-              desc={item.text}
-            />
-          ))}
-      </div>
-    </motion.div>
+    <>
+      <motion.div
+        transition={{ duration: 1, ease: "easeOut" }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ amount: 0.4 }}
+        className={styles.aboutSecStagesContainer}
+        style={{ animation: "none" }}
+      >
+        <AboutStagesContainerLine stages={stages.slice(0, 4)} />
+        <AboutStagesContainerLine stages={stages.slice(4)} />
+      </motion.div>
+    </>
   );
-}
+};
+
+export default AboutStagesContainer;

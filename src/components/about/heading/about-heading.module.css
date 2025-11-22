@@ -1,0 +1,38 @@
+.blockHeading {
+  margin-bottom: 2svh;
+  height: 15svh;
+  /* overflow: hidden; */
+
+  * {
+    color: white;
+    font-size: 2vw;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+.blockHeadingMotion {
+  height: 25svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+
+}
+@media (max-width: 900px) {
+  .blockHeading {
+    height: 10svh;
+  }
+  .blockHeadingMotion {
+    height: 10svh;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+
+
+    * {
+      font-size: 5vw;
+    }
+  }
+}

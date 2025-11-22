@@ -1,0 +1,238 @@
+.aboutSecStagesContainer {
+  max-width: 90vw;
+  z-index: 10;
+  width: auto;
+  overflow: hidden;
+  align-self: center;
+  display: flex;
+  max-height: 110svh;
+  flex-direction: column;
+  height: auto;
+  max-height: 100svh;
+  align-items: center;
+  justify-items: center;
+  column-gap: 3vw;
+}
+.aboutStageItemContainer {
+  height: 20vw;
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  flex-direction: "column";
+  width: 20vw;
+}
+.aboutStageNum {
+  position: relative;
+  display: flex;
+  left: 1.6vw;
+  top: 3vw;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  z-index: 9;
+  font-weight: 300;
+  font-size: 1.4vw;
+}
+.aboutSecStagesLine {
+  display: flex;
+  height: 22vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  column-gap: 3vw;
+}
+.aboutStageItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4svh;
+  height: 17vw;
+  overflow: hidden;
+  width: 19vw;
+  padding: 1vw;
+  align-items: center;
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 21px;
+  text-align: center;
+  color: white;
+
+  * {
+    cursor: default;
+  }
+
+  .aboutStagesSecondSVG {
+    opacity: 1;
+    border-radius: 6px;
+    position: absolute;
+    transition: 1s;
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    path {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .aboutStagesFirstSVG {
+    display: none;
+    position: absolute;
+    z-index: 7;
+    border-radius: 6px;
+  }
+}
+.aboutStageItem:hover {
+  .aboutStagesSecondSVG {
+    opacity: 1;
+    filter: drop-shadow(1px 1px 10px #007cf8);
+  }
+}
+.aboutStageName {
+    margin-top: 8svh;
+    z-index: 9;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.aboutStageText {
+    z-index: 9;
+    font-weight: 300;
+    text-align: center;
+    font-size: 0.8vw;
+    max-width: 80%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+@media (max-width: 900px) {
+  .aboutSecStagesContainer {
+    z-index: 10;
+    overflow: hidden;
+    width: 90vw;
+    position: relative;
+    align-self: center;
+    padding-left: 60vw;
+    display: flex;
+    flex-direction: column;
+    height: 61vw;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .aboutStageItemContainer {
+    overflow: hidden;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    height: 60vw;
+    position: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60vw;
+  }
+  .aboutStageNum {
+    font-size: 4vw;
+    font-family: "Gilroy Bold", sans-serif;
+    left: -24.5vw;
+    top: 6.5vw;
+  }
+  .aboutSecStagesLine::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  .aboutSecStagesLine {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(9, 1fr);
+    height: 60vw;
+    align-self: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    left: -26vw;
+    column-gap: 20vw;
+    width: 86vw;
+
+    * {
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+  }
+  .aboutStageItem {
+    width: 60vw;
+    height: 60vw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    row-gap: 1svh;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    font-family: "Nunito Sans", sans-serif;
+    border-radius: 21px;
+    text-align: center;
+    color: white;
+
+    * {
+      cursor: default;
+    }
+
+    .aboutStagesSecondSVG {
+      opacity: 1;
+      border-radius: 6px;
+      position: absolute;
+      transition: 1s;
+      color: #1a1a1a;
+      z-index: 8;
+      width: 59vw;
+      padding-right: 2vw;
+      height: 59vw;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      path {
+        width: 70vw;
+        height: 60vw;
+        background-color: black;
+      }
+    }
+
+    .aboutStagesFirstSVG {
+      display: none;
+      position: absolute;
+      z-index: 7;
+      border-radius: 6px;
+    }
+  }
+  /* delete */
+  .aboutStageItem:hover {
+    filter: none;
+    .aboutStagesSecondSVG {
+      opacity: 1;
+      filter: none;
+    }
+  }
+      .aboutStagesSecondSVG {
+        width: 60vw;
+        height: 60vw;
+    }
+      .aboutStageName {
+        margin-bottom: 1svh;
+    }
+        .aboutStageText {
+        margin-top: 0;
+        z-index: 13;
+        display: flex;
+        font-size: 2.5vw;
+        font-weight: 300;
+    }
+}

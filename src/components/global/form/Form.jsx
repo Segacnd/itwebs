@@ -3,6 +3,7 @@ import Input from "./Input";
 import Textarea from "./Textarea";
 import * as styles from '../globales.module.css'
 export default function Form({
+  variant = '',
   register,
   handleSubmit,
   onSubmit,
@@ -11,7 +12,7 @@ export default function Form({
   isChexbox,
 }) {
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.modalItems}>
+    <form onSubmit={handleSubmit(onSubmit)} className={variant? `${variant}` :styles.modalItems}>
       <Input
         name="name"
         register={register}

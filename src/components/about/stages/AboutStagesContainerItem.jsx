@@ -1,8 +1,8 @@
 'use client'
-import * as styles from '../about.module.css';
+import * as styles from './about-stage.module.css';
 import * as motion from 'motion/react-client';
 
-const AboutStageItem = ({ num, name, text }) => {
+const AboutStagesContainerItem = ({ num, name, text }) => {
     return (
         <motion.div
             initial={{ transform: 'translateX(0)', opacity: 1 }}
@@ -29,4 +29,4 @@ const AboutStageItem = ({ num, name, text }) => {
     )
 }
 
-export default AboutStageItem
+export default AboutStagesContainerItem

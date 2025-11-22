@@ -3,8 +3,7 @@ import HomeWorks from "../../../components/home/HomeWorks";
 import AboutWorthsBlock from "../../../components/about/AboutWorthsBlock";
 import AboutWorks from "../../../components/about/works/AboutWorks";
 import AboutStages from "../../../components/about/stages/AboutStages";
-import AboutSecStages from "../../../components/about/AboutSecStages";
-import AboutPartners from "../../../components/about/AboutPartners";
+import AboutPartners from "../../../components/about/partners/AboutPartners";
 import AboutConsultBlock from "../../../components/about/AboutConsultBlock";
 import PageSeoBlock from "../../../components/global/seoBlock/PageSeoBlock";
 import AboutTechBlock from "../../../components/about/AboutTechBlock";
@@ -13,13 +12,11 @@ import MobileBack from "../../../components/global/MobileBack";
 export const generateMetadata = async () => {
   return {
     title: "Информация о digital агентстве ITWEBS в Беларуси",
-    description:
-      "ITWEBS — команда профессионалов в сфере информационных технологий, готовая предложить широкий спектр услуг для бизнеса",
+    description: "ITWEBS — команда профессионалов в сфере информационных технологий, готовая предложить широкий спектр услуг для бизнеса",
     authors: [{ name: "ITWEBS" }],
     openGraph: {
       title: "Информация о digital агентстве ITWEBS в Беларуси",
-      description:
-        "ITWEBS — команда профессионалов в сфере информационных технологий, готовая предложить широкий спектр услуг для бизнеса",
+      description: "ITWEBS — команда профессионалов в сфере информационных технологий, готовая предложить широкий спектр услуг для бизнеса",
       url: `https://itwebs.by/about`,
       siteName: "Информация о digital агентстве ITWEBS в Беларуси",
       locale: "ru_RU",
@@ -44,7 +41,7 @@ const AboutPage = () => {
       <AboutHeadBlock />
       <AboutWorthsBlock />
       <AboutWorks />
-      <AboutSecStages />
+      <AboutStages />
       <AboutPartners />
       <AboutTechBlock />
       <AboutConsultBlock />
